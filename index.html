@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jonatan Castellanos · Profesor de Idiomas | Habla inglés sin miedo</title>
-  <meta name="description" content="Clases particulares 1:1 de inglés y español con metodología clara, práctica y comunicativa. Material pedagógico profesional para profesores de idiomas (Teaching Materials).">
+  <meta name="description" content="Clases particulares 1:1 de inglés y español desde 18 USD/hora. Metodología clara, práctica y comunicativa. Material pedagógico profesional para profesores de idiomas.">
   <meta property="og:title" content="Jonatan Castellanos · Profesor de Idiomas">
-  <meta property="og:description" content="Habla inglés sin miedo: clases 1:1 online + packs pedagógicos para profesores. 16 años de experiencia.">
+  <meta property="og:description" content="Habla inglés sin miedo: clases 1:1 online desde 18 USD/hora + packs pedagógicos para profesores. 16 años de experiencia.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://castellanosjonatan.com/">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23ff4f30'/%3E%3Ctext x='32' y='45' font-family='Arial Black,sans-serif' font-size='28' font-weight='900' fill='%23fff6ec' text-anchor='middle'%3EJC%3C/text%3E%3C/svg%3E">
@@ -27,20 +27,23 @@
         <span class="brand-mono">JC</span>
         <span class="brand-text">
           <span class="brand-name">Jonatan Castellanos</span>
-          <span class="brand-tag">Profesor de Idiomas</span>
+          <span class="brand-tag" data-i18n="brand_tag">Profesor de Idiomas</span>
         </span>
       </a>
       <nav class="nav-links" id="navLinks" aria-label="Navegación principal">
-        <a href="#clases" data-nav>Clases 1:1</a>
-        <a href="#packs" data-nav>Tienda del Profe</a>
-        <a href="#sobre-mi" data-nav>Sobre mí</a>
-        <a href="#testimonios" data-nav>Testimonios</a>
+        <a href="#clases" data-nav data-i18n="nav_clases">Clases 1:1</a>
+        <a href="#precios" data-nav data-i18n="nav_precios">Precios</a>
+        <a href="#packs" data-nav data-i18n="nav_packs">Tienda del Profe</a>
+        <a href="#sobre-mi" data-nav data-i18n="nav_sobre">Sobre mí</a>
         <a href="#faq" data-nav>FAQ</a>
-        <a href="#contacto" class="nav-cta">Escríbeme 👋</a>
+        <a href="#contacto" class="nav-cta" data-i18n="nav_cta">Escríbeme 👋</a>
       </nav>
-      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav-side">
+        <button class="lang-toggle" id="langToggle" aria-label="Switch language">EN</button>
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -57,30 +60,30 @@
 
       <div class="container hero-inner">
         <div class="hero-copy">
-          <p class="hero-eyebrow reveal"><span class="pulse-dot"></span> Cupos abiertos · Clases online 1:1</p>
+          <p class="hero-eyebrow reveal"><span class="pulse-dot"></span> <span data-i18n="hero_eyebrow">Cupos abiertos · Clases online 1:1</span></p>
           <h1 class="reveal d-1">
-            Habla<br>
+            <span data-i18n="hero_t1">Habla</span><br>
             <span class="rotator-wrap"><span class="rotator" id="rotator">inglés</span></span><br>
-            <span class="hl">sin miedo.</span>
+            <span class="hl" data-i18n="hero_t2">sin miedo.</span>
           </h1>
-          <p class="hero-desc reveal d-2">
+          <p class="hero-desc reveal d-2" data-i18n="hero_desc">
             Soy <strong>Jonatan Castellanos</strong> y llevo 16 años haciendo que los idiomas
             por fin se entiendan. Clases 1:1 de <strong>inglés</strong> y <strong>español</strong>
             que se sienten como una conversación, no como una tarea.
           </p>
           <div class="hero-actions reveal d-3">
-            <a class="btn btn-coral btn-lg" href="https://wa.me/16892960072?text=Hola%2C%20quiero%20clases%20particulares%201%3A1%20de%20ingl%C3%A9s%20o%20espa%C3%B1ol.%20%C2%BFMe%20das%20info%20de%20horarios%2C%20precios%20y%20niveles%3F%20%F0%9F%98%8A" target="_blank" rel="noopener noreferrer">
+            <a class="btn btn-coral btn-lg" data-wa="clases" href="https://wa.me/573148309306" target="_blank" rel="noopener noreferrer">
               <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2-1.42.25-.7.25-1.3.18-1.42-.08-.13-.28-.2-.58-.35M12.04 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.83 9.83 0 0 1 7 2.9 9.83 9.83 0 0 1 2.89 7c0 5.45-4.44 9.88-9.9 9.88m8.42-18.3A11.8 11.8 0 0 0 12.04 0C5.46 0 .1 5.35.1 11.92c0 2.1.55 4.15 1.6 5.96L0 24l6.27-1.64a11.94 11.94 0 0 0 5.76 1.47h.01c6.58 0 11.94-5.35 11.94-11.92 0-3.18-1.24-6.18-3.52-8.43"/></svg>
-              Empezar por WhatsApp
+              <span data-i18n="hero_cta1">Empezar por WhatsApp</span>
             </a>
-            <a class="btn btn-ink-outline btn-lg" href="#packs">Soy profe → ver packs</a>
+            <a class="btn btn-ink-outline btn-lg" href="#precios" data-i18n="hero_cta2">Ver precios →</a>
           </div>
 
           <dl class="hero-stats reveal d-4">
-            <div><dt data-counter="16">0</dt><dd>años enseñando</dd></div>
-            <div><dt data-counter="100" data-prefix="+">0</dt><dd>actividades por pack</dd></div>
-            <div><dt data-counter="24" data-prefix="&lt;" data-suffix="h">0</dt><dd>tiempo de respuesta</dd></div>
-            <div><dt data-counter="7" data-suffix="d">0</dt><dd>garantía Hotmart</dd></div>
+            <div><dt data-counter="16">0</dt><dd data-i18n="stat_1">años enseñando</dd></div>
+            <div><dt data-counter="18" data-prefix="$" data-suffix="/h">0</dt><dd data-i18n="stat_2">USD, desde (grupos)</dd></div>
+            <div><dt data-counter="3" data-prefix="1–">0</dt><dd data-i18n="stat_3">estudiantes por clase</dd></div>
+            <div><dt data-counter="24" data-prefix="&lt;" data-suffix="h">0</dt><dd data-i18n="stat_4">tiempo de respuesta</dd></div>
           </dl>
         </div>
 
@@ -90,25 +93,25 @@
             <div class="chat-head">
               <span class="chat-avatar">JC</span>
               <div class="chat-id">
-                <strong>Jonatan · Profesor</strong>
-                <span><i class="online-dot"></i> en línea</span>
+                <strong data-i18n="chat_name">Jonatan · Profesor</strong>
+                <span><i class="online-dot"></i> <span data-i18n="chat_online">en línea</span></span>
               </div>
             </div>
             <div class="chat-body" id="chatBody">
-              <div class="msg msg-in" data-step="0">Hola Jonatan 👋 Necesito inglés para una entrevista de trabajo…</div>
-              <div class="msg msg-out" data-step="1">¡Perfecto! Empezamos con un diagnóstico y armamos tu plan con metas semanales 🎯</div>
-              <div class="msg msg-in" data-step="2">Great! When can we start? 😄</div>
-              <div class="msg msg-out" data-step="3">That's the spirit! 🚀 Esta misma semana.</div>
+              <div class="msg msg-in" data-step="0" data-i18n="chat_m0">Hola Jonatan 👋 Necesito inglés para una entrevista de trabajo…</div>
+              <div class="msg msg-out" data-step="1" data-i18n="chat_m1">¡Perfecto! Empezamos con un diagnóstico y armamos tu plan con metas semanales 🎯</div>
+              <div class="msg msg-in" data-step="2" data-i18n="chat_m2">Great! When can we start? 😄</div>
+              <div class="msg msg-out" data-step="3" data-i18n="chat_m3">That's the spirit! 🚀 Esta misma semana.</div>
               <div class="msg msg-typing" data-step="4"><span></span><span></span><span></span></div>
             </div>
             <div class="chat-foot">
-              <span>Escribe un mensaje…</span>
+              <span data-i18n="chat_placeholder">Escribe un mensaje…</span>
               <span class="chat-send">➤</span>
             </div>
           </div>
           <div class="tag-chip chip-a">🇬🇧 English A1–B1</div>
-          <div class="tag-chip chip-b">🇪🇸 Español ELE</div>
-          <div class="tag-chip chip-c">📚 Packs para profes</div>
+          <div class="tag-chip chip-b" data-i18n="chip_es">🇪🇸 Español ELE</div>
+          <div class="tag-chip chip-c" data-i18n="chip_packs">📚 Packs para profes</div>
         </div>
       </div>
     </section>
@@ -116,16 +119,16 @@
     <!-- ===== MARQUEE ===== -->
     <div class="ribbon" id="ribbon" aria-hidden="true">
       <div class="ribbon-track">
-        <span>Habla sin miedo</span><i>✱</i>
-        <span>Clases privadas 1:1</span><i>✱</i>
-        <span>Método comunicativo</span><i>✱</i>
-        <span>Alineado al MCER</span><i>✱</i>
-        <span>Pagos vía PayPal</span><i>✱</i>
-        <span>Habla sin miedo</span><i>✱</i>
-        <span>Clases privadas 1:1</span><i>✱</i>
-        <span>Método comunicativo</span><i>✱</i>
-        <span>Alineado al MCER</span><i>✱</i>
-        <span>Pagos vía PayPal</span><i>✱</i>
+        <span data-i18n="rb_1">Habla sin miedo</span><i>✱</i>
+        <span data-i18n="rb_2">Clases privadas 1:1</span><i>✱</i>
+        <span data-i18n="rb_3">Desde 18 USD/hora</span><i>✱</i>
+        <span data-i18n="rb_4">Método comunicativo</span><i>✱</i>
+        <span data-i18n="rb_5">Pagos vía PayPal</span><i>✱</i>
+        <span data-i18n="rb_1">Habla sin miedo</span><i>✱</i>
+        <span data-i18n="rb_2">Clases privadas 1:1</span><i>✱</i>
+        <span data-i18n="rb_3">Desde 18 USD/hora</span><i>✱</i>
+        <span data-i18n="rb_4">Método comunicativo</span><i>✱</i>
+        <span data-i18n="rb_5">Pagos vía PayPal</span><i>✱</i>
       </div>
     </div>
 
@@ -133,15 +136,15 @@
     <section class="section" id="clases">
       <div class="container">
         <div class="section-head reveal">
-          <p class="kicker kicker-coral">El método</p>
-          <h2>Clases 1:1 que <span class="hl hl-yellow">sí funcionan</span></h2>
-          <p class="lead">Nada de listas de verbos infinitas. Diagnóstico inicial, metas semanales y conversación real desde el primer día. Online y con horarios flexibles.</p>
+          <p class="kicker kicker-coral" data-i18n="clases_kicker">El método</p>
+          <h2 data-i18n="clases_h2">Clases 1:1 que <span class="hl hl-yellow">sí funcionan</span></h2>
+          <p class="lead" data-i18n="clases_lead">Nada de listas de verbos infinitas. Diagnóstico inicial, metas semanales y conversación real desde el primer día. Online, con horarios flexibles, solo o con hasta 2 amigos.</p>
         </div>
 
         <!-- Tabs -->
         <div class="tabs reveal" role="tablist" aria-label="Idiomas">
-          <button class="tab active" id="tab-en" role="tab" aria-selected="true" aria-controls="panel-en" data-tab="en">🇬🇧 Inglés</button>
-          <button class="tab" id="tab-es" role="tab" aria-selected="false" aria-controls="panel-es" data-tab="es">🇪🇸 Español</button>
+          <button class="tab active" id="tab-en" role="tab" aria-selected="true" aria-controls="panel-en" data-tab="en" data-i18n="tab_en">🇬🇧 Inglés</button>
+          <button class="tab" id="tab-es" role="tab" aria-selected="false" aria-controls="panel-es" data-tab="es" data-i18n="tab_es">🇪🇸 Español</button>
           <span class="tab-glider" id="tabGlider"></span>
         </div>
 
@@ -149,22 +152,22 @@
           <article class="tab-panel active" id="panel-en" role="tabpanel" aria-labelledby="tab-en">
             <div class="panel-grid">
               <div class="panel-info">
-                <span class="level-badge badge-sky">Progresión A1 → B1 · MCER</span>
-                <h3>Inglés que se te nota</h3>
-                <p>Enfoque comunicativo con explicaciones simples y práctica guiada. Hablas desde la primera clase, no "algún día cuando estés listo".</p>
+                <span class="level-badge badge-sky" data-i18n="pen_badge">Progresión A1 → B1 · MCER</span>
+                <h3 data-i18n="pen_h3">Inglés que se te nota</h3>
+                <p data-i18n="pen_p">Enfoque comunicativo con explicaciones simples y práctica guiada. Hablas desde la primera clase, no "algún día cuando estés listo".</p>
                 <ul class="checklist">
-                  <li>Enfoque comunicativo + gramática funcional</li>
-                  <li>Corrección inmediata y explicación comparativa (EN/ES)</li>
-                  <li>Pronunciación más clara y natural</li>
-                  <li>Mayor fluidez al hablar con confianza</li>
-                  <li>Preparación para entrevistas, exámenes o viajes</li>
+                  <li data-i18n="pen_l1">Enfoque comunicativo + gramática funcional</li>
+                  <li data-i18n="pen_l2">Corrección inmediata y explicación comparativa (EN/ES)</li>
+                  <li data-i18n="pen_l3">Pronunciación más clara y natural</li>
+                  <li data-i18n="pen_l4">Mayor fluidez al hablar con confianza</li>
+                  <li data-i18n="pen_l5">Preparación para entrevistas, exámenes o viajes</li>
                 </ul>
-                <a class="btn btn-ink" href="https://wa.me/16892960072?text=Hola%2C%20quiero%20clases%20particulares%201%3A1%20de%20ingl%C3%A9s.%20%C2%BFMe%20das%20info%20de%20horarios%2C%20precios%20y%20niveles%3F%20%F0%9F%98%8A" target="_blank" rel="noopener noreferrer">Quiero mi diagnóstico →</a>
+                <a class="btn btn-ink" data-wa="ingles" href="https://wa.me/573148309306" target="_blank" rel="noopener noreferrer" data-i18n="pen_cta">Quiero mi diagnóstico →</a>
               </div>
               <div class="panel-steps">
-                <div class="step step-1"><span class="step-n">1</span><div><strong>Radiografía de tu nivel</strong><p>Diagnóstico gratuito: sabemos exactamente de dónde partes.</p></div></div>
-                <div class="step step-2"><span class="step-n">2</span><div><strong>Tu plan de vuelo</strong><p>Metas semanales claras: sabes qué practicas y por qué.</p></div></div>
-                <div class="step step-3"><span class="step-n">3</span><div><strong>Despegue visible</strong><p>Retroalimentación concreta en cada sesión. Se nota, y se lo notan.</p></div></div>
+                <div class="step step-1"><span class="step-n">1</span><div><strong data-i18n="step1_t">Radiografía de tu nivel</strong><p data-i18n="step1_p">Diagnóstico gratuito: sabemos exactamente de dónde partes.</p></div></div>
+                <div class="step step-2"><span class="step-n">2</span><div><strong data-i18n="step2_t">Tu plan de vuelo</strong><p data-i18n="step2_p">Metas semanales claras: sabes qué practicas y por qué.</p></div></div>
+                <div class="step step-3"><span class="step-n">3</span><div><strong data-i18n="step3_t">Despegue visible</strong><p data-i18n="step3_p">Retroalimentación concreta en cada sesión. Se nota, y se lo notan.</p></div></div>
               </div>
             </div>
           </article>
@@ -172,28 +175,81 @@
           <article class="tab-panel" id="panel-es" role="tabpanel" aria-labelledby="tab-es" hidden>
             <div class="panel-grid">
               <div class="panel-info">
-                <span class="level-badge badge-coral">Español ELE · Todos los niveles</span>
-                <h3>Español para la vida real</h3>
-                <p>Español como lengua extranjera con metodología clara y comunicativa. Sesiones personalizadas para objetivos académicos, profesionales o de viaje.</p>
+                <span class="level-badge badge-coral" data-i18n="pes_badge">Español ELE · Todos los niveles</span>
+                <h3 data-i18n="pes_h3">Español para la vida real</h3>
+                <p data-i18n="pes_p">Español como lengua extranjera con metodología clara y comunicativa. Sesiones personalizadas para objetivos académicos, profesionales o de viaje.</p>
                 <ul class="checklist">
-                  <li>Actividades dinámicas adaptadas a tu nivel</li>
-                  <li>Comprensión de estructuras clave sin memorizar</li>
-                  <li>Material visual, práctico y reutilizable</li>
-                  <li>Plan claro con metas semanales</li>
-                  <li>Conversación activa desde la primera clase</li>
+                  <li data-i18n="pes_l1">Actividades dinámicas adaptadas a tu nivel</li>
+                  <li data-i18n="pes_l2">Comprensión de estructuras clave sin memorizar</li>
+                  <li data-i18n="pes_l3">Material visual, práctico y reutilizable</li>
+                  <li data-i18n="pes_l4">Plan claro con metas semanales</li>
+                  <li data-i18n="pes_l5">Conversación activa desde la primera clase</li>
                 </ul>
-                <a class="btn btn-ink" href="https://wa.me/16892960072?text=Hola%2C%20quiero%20clases%20particulares%201%3A1%20de%20espa%C3%B1ol.%20%C2%BFMe%20das%20info%20de%20horarios%2C%20precios%20y%20niveles%3F%20%F0%9F%98%8A" target="_blank" rel="noopener noreferrer">Quiero mi diagnóstico →</a>
+                <a class="btn btn-ink" data-wa="espanol" href="https://wa.me/573148309306" target="_blank" rel="noopener noreferrer" data-i18n="pes_cta">Quiero mi diagnóstico →</a>
               </div>
               <div class="panel-steps">
-                <div class="step step-1"><span class="step-n">1</span><div><strong>Radiografía de tu nivel</strong><p>Diagnóstico gratuito: sabemos exactamente de dónde partes.</p></div></div>
-                <div class="step step-2"><span class="step-n">2</span><div><strong>Tu plan de vuelo</strong><p>Metas semanales claras: sabes qué practicas y por qué.</p></div></div>
-                <div class="step step-3"><span class="step-n">3</span><div><strong>Despegue visible</strong><p>Retroalimentación concreta en cada sesión. Se nota, y se lo notan.</p></div></div>
+                <div class="step step-1"><span class="step-n">1</span><div><strong data-i18n="step1_t">Radiografía de tu nivel</strong><p data-i18n="step1_p">Diagnóstico gratuito: sabemos exactamente de dónde partes.</p></div></div>
+                <div class="step step-2"><span class="step-n">2</span><div><strong data-i18n="step2_t">Tu plan de vuelo</strong><p data-i18n="step2_p">Metas semanales claras: sabes qué practicas y por qué.</p></div></div>
+                <div class="step step-3"><span class="step-n">3</span><div><strong data-i18n="step3_t">Despegue visible</strong><p data-i18n="step3_p">Retroalimentación concreta en cada sesión. Se nota, y se lo notan.</p></div></div>
               </div>
             </div>
           </article>
         </div>
+      </div>
+    </section>
 
-        <p class="note reveal">💳 Pagos internacionales vía <strong>PayPal</strong> · Te comparto niveles, horarios y una ruta según tu objetivo.</p>
+    <!-- ===== PRECIOS ===== -->
+    <section class="section section-cream" id="precios">
+      <div class="container">
+        <div class="section-head center reveal">
+          <p class="kicker kicker-coral" data-i18n="pr_kicker">Precios claros</p>
+          <h2 data-i18n="pr_h2">Invierte en tu <span class="hl hl-coral">fluidez</span></h2>
+          <p class="lead" data-i18n="pr_lead">Sin matrículas ni sorpresas: pagas por hora vía PayPal. Trae a un amigo (o dos) y ahorran todos. Máximo 3 estudiantes por clase.</p>
+        </div>
+
+        <div class="pricing reveal">
+          <article class="price-card price-featured">
+            <span class="price-badge" data-i18n="pr1_badge">★ Más popular</span>
+            <span class="price-emoji">🎯</span>
+            <h3 data-i18n="pr1_name">Solo tú</h3>
+            <p class="price-line"><span class="price-num">$22</span><span class="price-unit" data-i18n="pr1_unit">USD / hora</span></p>
+            <p class="price-sub" data-i18n="pr1_sub">1 estudiante · atención 100% para ti</p>
+            <ul class="checklist">
+              <li data-i18n="pr1_f1">Plan totalmente a tu medida</li>
+              <li data-i18n="pr1_f2">Todo el tiempo de habla es tuyo</li>
+              <li data-i18n="pr1_f3">Horarios flexibles</li>
+            </ul>
+            <a class="btn btn-coral btn-block" data-wa="solo" href="https://wa.me/573148309306" target="_blank" rel="noopener noreferrer" data-i18n="pr1_cta">Empezar solo →</a>
+          </article>
+
+          <article class="price-card">
+            <span class="price-emoji">👯</span>
+            <h3 data-i18n="pr2_name">En pareja</h3>
+            <p class="price-line"><span class="price-num">$20</span><span class="price-unit" data-i18n="pr2_unit">USD / hora <em>cada uno</em></span></p>
+            <p class="price-sub" data-i18n="pr2_sub">2 estudiantes · aprende acompañado</p>
+            <ul class="checklist">
+              <li data-i18n="pr2_f1">Practica conversación real de a dos</li>
+              <li data-i18n="pr2_f2">Mismo plan, menor costo</li>
+              <li data-i18n="pr2_f3">Ideal para parejas y colegas</li>
+            </ul>
+            <a class="btn btn-ink btn-block" data-wa="duo" href="https://wa.me/573148309306" target="_blank" rel="noopener noreferrer" data-i18n="pr2_cta">Venir de a dos →</a>
+          </article>
+
+          <article class="price-card">
+            <span class="price-emoji">🎉</span>
+            <h3 data-i18n="pr3_name">Mini-grupo</h3>
+            <p class="price-line"><span class="price-num">$18</span><span class="price-unit" data-i18n="pr3_unit">USD / hora <em>cada uno</em></span></p>
+            <p class="price-sub" data-i18n="pr3_sub">3 estudiantes · el cupo máximo</p>
+            <ul class="checklist">
+              <li data-i18n="pr3_f1">El precio más económico</li>
+              <li data-i18n="pr3_f2">Dinámicas y juegos de grupo</li>
+              <li data-i18n="pr3_f3">Grupo cerrado: solo ustedes 3</li>
+            </ul>
+            <a class="btn btn-ink btn-block" data-wa="trio" href="https://wa.me/573148309306" target="_blank" rel="noopener noreferrer" data-i18n="pr3_cta">Armar mi grupo →</a>
+          </article>
+        </div>
+
+        <p class="note reveal" data-i18n="pr_note">💳 Pagos internacionales vía <strong>PayPal</strong> · La primera conversación de diagnóstico es <strong>gratis</strong>.</p>
       </div>
     </section>
 
@@ -201,18 +257,18 @@
     <section class="section section-violet" id="packs">
       <div class="container">
         <div class="section-head reveal">
-          <p class="kicker kicker-cream">Teaching Materials · La Tienda del Profe</p>
-          <h2>Enseña más, <span class="hl hl-coral">prepara menos</span></h2>
-          <p class="lead">Packs en PDF listos para dar clase mañana mismo: estructura clara, enfoque comunicativo alineado al MCER y guías didácticas incluidas. Compra segura vía Hotmart y entrega inmediata.</p>
+          <p class="kicker kicker-cream" data-i18n="pk_kicker">Teaching Materials · La Tienda del Profe</p>
+          <h2 data-i18n="pk_h2">¿Enseñas idiomas? <span class="hl hl-coral">Prepara menos</span></h2>
+          <p class="lead" data-i18n="pk_lead">Además de mis clases, creo packs en PDF para otros profesores: estructura clara, enfoque comunicativo alineado al MCER y guías didácticas incluidas. Compra segura vía Hotmart y entrega inmediata.</p>
         </div>
 
         <!-- Filtros -->
         <div class="filters reveal" role="group" aria-label="Filtrar packs por idioma">
-          <button class="filter active" data-filter="all">Todos</button>
-          <button class="filter" data-filter="ingles">Enseño inglés</button>
-          <button class="filter" data-filter="frances">Enseño francés</button>
-          <button class="filter" data-filter="espanol">Enseño español</button>
-          <button class="filter" data-filter="gramatica">Gramática</button>
+          <button class="filter active" data-filter="all" data-i18n="f_all">Todos</button>
+          <button class="filter" data-filter="ingles" data-i18n="f_en">Enseño inglés</button>
+          <button class="filter" data-filter="frances" data-i18n="f_fr">Enseño francés</button>
+          <button class="filter" data-filter="espanol" data-i18n="f_es">Enseño español</button>
+          <button class="filter" data-filter="gramatica" data-i18n="f_gr">Gramática</button>
         </div>
 
         <div class="products reveal" id="products">
@@ -221,10 +277,10 @@
             <span class="product-flag">🇬🇧</span>
             <span class="product-tag tag-sky">English · For Teachers</span>
             <h3>English A1–A2</h3>
-            <p class="product-hook">Tu curso de inglés completo, resuelto.</p>
-            <p>Más de 100 actividades, explicaciones gramaticales y material visual listo para tus grupos.</p>
-            <ul class="product-feats"><li>+100 actividades</li><li>Guía didáctica</li><li>Material visual</li></ul>
-            <a class="btn btn-coral btn-block" href="https://go.hotmart.com/B101364901X?dp=1" target="_blank" rel="noopener noreferrer">Lo quiero →</a>
+            <p class="product-hook" data-i18n="pd1_hook">Tu curso de inglés completo, resuelto.</p>
+            <p data-i18n="pd1_p">Más de 100 actividades, explicaciones gramaticales y material visual listo para tus grupos.</p>
+            <ul class="product-feats"><li data-i18n="pd1_t1">+100 actividades</li><li data-i18n="pd1_t2">Guía didáctica</li><li data-i18n="pd1_t3">Material visual</li></ul>
+            <a class="btn btn-coral btn-block" href="https://go.hotmart.com/B101364901X?dp=1" target="_blank" rel="noopener noreferrer" data-i18n="pd_cta">Lo quiero →</a>
           </article>
 
           <article class="product tilt" data-cat="frances">
@@ -232,10 +288,10 @@
             <span class="product-flag">🇫🇷</span>
             <span class="product-tag tag-violet">Français · A1–A2</span>
             <h3>Pack Francés A1–A2</h3>
-            <p class="product-hook">Secuencias completas, cero improvisación.</p>
-            <p>Secuencias didácticas A1–A2 (MCER) con enfoque comunicativo y gramática clara para profes de francés.</p>
-            <ul class="product-feats"><li>Secuencias completas</li><li>MCER</li><li>Gramática visual</li></ul>
-            <a class="btn btn-coral btn-block" href="https://go.hotmart.com/C101601427N?dp=1" target="_blank" rel="noopener noreferrer">Lo quiero →</a>
+            <p class="product-hook" data-i18n="pd2_hook">Secuencias completas, cero improvisación.</p>
+            <p data-i18n="pd2_p">Secuencias didácticas A1–A2 (MCER) con enfoque comunicativo y gramática clara para profes de francés.</p>
+            <ul class="product-feats"><li data-i18n="pd2_t1">Secuencias completas</li><li>MCER</li><li data-i18n="pd2_t3">Gramática visual</li></ul>
+            <a class="btn btn-coral btn-block" href="https://go.hotmart.com/C101601427N?dp=1" target="_blank" rel="noopener noreferrer" data-i18n="pd_cta">Lo quiero →</a>
           </article>
 
           <article class="product tilt" data-cat="ingles frances">
@@ -244,7 +300,7 @@
             <span class="product-tag tag-mint">Pour Professeurs Francophones</span>
             <h3>Anglais pour profs</h3>
             <p class="product-hook">Le pack complet, prêt à l'emploi.</p>
-            <p>Contenu progressif et directement utilisable en classe, avec instructions en français.</p>
+            <p data-i18n="pd3_p">Contenu progressif et directement utilisable en classe, avec instructions en français.</p>
             <ul class="product-feats"><li>Prêt à l'emploi</li><li>Instructions en FR</li><li>Activités communicatives</li></ul>
             <a class="btn btn-coral btn-block" href="https://go.hotmart.com/J101687014J?dp=1" target="_blank" rel="noopener noreferrer">Je le veux →</a>
           </article>
@@ -254,46 +310,46 @@
             <span class="product-flag">🇪🇸</span>
             <span class="product-tag tag-coral">Spanish Toolkit · EN/ES</span>
             <h3>Teach Spanish Easy</h3>
-            <p class="product-hook">Español bilingüe, listo para el lunes.</p>
-            <p>Material bilingüe (EN/ES) con actividades culturales y planes de clase completos.</p>
-            <ul class="product-feats"><li>Bilingüe EN/ES</li><li>Planes de clase</li><li>Cultura</li></ul>
-            <a class="btn btn-coral btn-block" href="https://go.hotmart.com/I101326739A?dp=1" target="_blank" rel="noopener noreferrer">Lo quiero →</a>
+            <p class="product-hook" data-i18n="pd4_hook">Español bilingüe, listo para el lunes.</p>
+            <p data-i18n="pd4_p">Material bilingüe (EN/ES) con actividades culturales y planes de clase completos.</p>
+            <ul class="product-feats"><li data-i18n="pd4_t1">Bilingüe EN/ES</li><li data-i18n="pd4_t2">Planes de clase</li><li data-i18n="pd4_t3">Cultura</li></ul>
+            <a class="btn btn-coral btn-block" href="https://go.hotmart.com/I101326739A?dp=1" target="_blank" rel="noopener noreferrer" data-i18n="pd_cta">Lo quiero →</a>
           </article>
 
           <article class="product tilt product-featured" data-cat="gramatica ingles">
             <div class="product-glow" aria-hidden="true"></div>
-            <span class="product-badge">★ El más completo</span>
+            <span class="product-badge" data-i18n="pd5_badge">★ El más completo</span>
             <span class="product-flag">🧠</span>
-            <span class="product-tag tag-yellow">Gramática Total</span>
+            <span class="product-tag tag-yellow" data-i18n="pd5_tag">Gramática Total</span>
             <h3>Grammar Master</h3>
-            <p class="product-hook">La gramática, dominada de una vez.</p>
-            <p>Curso completo con explicaciones claras, estructura total y material organizado.</p>
-            <ul class="product-feats"><li>Estructura total</li><li>Explicaciones claras</li><li>Material organizado</li></ul>
-            <a class="btn btn-coral btn-block" href="https://go.hotmart.com/B101403026Y?dp=1" target="_blank" rel="noopener noreferrer">Lo quiero →</a>
+            <p class="product-hook" data-i18n="pd5_hook">La gramática, dominada de una vez.</p>
+            <p data-i18n="pd5_p">Curso completo con explicaciones claras, estructura total y material organizado.</p>
+            <ul class="product-feats"><li data-i18n="pd5_t1">Estructura total</li><li data-i18n="pd5_t2">Explicaciones claras</li><li data-i18n="pd5_t3">Material organizado</li></ul>
+            <a class="btn btn-coral btn-block" href="https://go.hotmart.com/B101403026Y?dp=1" target="_blank" rel="noopener noreferrer" data-i18n="pd_cta">Lo quiero →</a>
           </article>
 
           <article class="product product-help" data-cat="all-always">
             <span class="product-flag">🤝</span>
-            <span class="product-tag tag-ink">¿No sabes cuál elegir?</span>
-            <h3>Te ayudo a decidir</h3>
-            <p>Escríbeme por WhatsApp y te recomiendo el pack ideal según el idioma que enseñas, tu nivel y tu tipo de clase. Sin compromiso.</p>
-            <a class="btn btn-ink-outline btn-block" href="https://wa.me/16892960072?text=Hola%2C%20soy%20profe.%20Quiero%20que%20me%20recomiendes%20el%20pack%20ideal%20seg%C3%BAn%20el%20idioma%20que%20ense%C3%B1o%20%F0%9F%98%8A" target="_blank" rel="noopener noreferrer">Pregúntame gratis</a>
+            <span class="product-tag tag-ink" data-i18n="pdh_tag">¿No sabes cuál elegir?</span>
+            <h3 data-i18n="pdh_h3">Te ayudo a decidir</h3>
+            <p data-i18n="pdh_p">Escríbeme por WhatsApp y te recomiendo el pack ideal según el idioma que enseñas, tu nivel y tu tipo de clase. Sin compromiso.</p>
+            <a class="btn btn-ink-outline btn-block" data-wa="profe" href="https://wa.me/573148309306" target="_blank" rel="noopener noreferrer" data-i18n="pdh_cta">Pregúntame gratis</a>
           </article>
         </div>
 
         <div class="perks reveal">
-          <div class="perk"><span class="perk-ico">⚡</span><div><strong>Entrega inmediata</strong><span>Descarga automática tras la compra en Hotmart</span></div></div>
-          <div class="perk"><span class="perk-ico">🛡️</span><div><strong>Garantía de 7 días</strong><span>Reembolso completo si no te convence</span></div></div>
-          <div class="perk"><span class="perk-ico">♾️</span><div><strong>Acceso de por vida</strong><span>Con actualizaciones sin costo adicional</span></div></div>
-          <div class="perk"><span class="perk-ico">👥</span><div><strong>Comunidad de profes</strong><span>Grupo de WhatsApp con clases gratuitas semanales</span></div></div>
+          <div class="perk"><span class="perk-ico">⚡</span><div><strong data-i18n="perk1_t">Entrega inmediata</strong><span data-i18n="perk1_s">Descarga automática tras la compra en Hotmart</span></div></div>
+          <div class="perk"><span class="perk-ico">🛡️</span><div><strong data-i18n="perk2_t">Garantía de 7 días</strong><span data-i18n="perk2_s">Reembolso completo si no te convence</span></div></div>
+          <div class="perk"><span class="perk-ico">♾️</span><div><strong data-i18n="perk3_t">Acceso de por vida</strong><span data-i18n="perk3_s">Con actualizaciones sin costo adicional</span></div></div>
+          <div class="perk"><span class="perk-ico">👥</span><div><strong data-i18n="perk4_t">Comunidad de profes</strong><span data-i18n="perk4_s">Grupo de WhatsApp con clases gratuitas semanales</span></div></div>
         </div>
 
         <div class="sample reveal">
           <div class="sample-copy">
-            <h3>🎁 Pruébalo gratis primero</h3>
-            <p>Descarga una muestra gratuita (3 actividades + guía) y comprueba el estándar del material antes de comprar.</p>
+            <h3 data-i18n="sm_h3">🎁 Pruébalo gratis primero</h3>
+            <p data-i18n="sm_p">Descarga una muestra gratuita (3 actividades + guía) y comprueba el estándar del material antes de comprar.</p>
           </div>
-          <a class="btn btn-yellow" href="mailto:business@castellanosjonatan.com?subject=Solicitud%20de%20muestra%20gratuita%20(Teaching%20Materials)&body=Hola%2C%20quiero%20recibir%20la%20muestra%20gratuita%20de%20Teaching%20Materials.%20%C2%A1Gracias!">Quiero mi muestra gratis</a>
+          <a class="btn btn-yellow" id="sampleMail" href="mailto:business@castellanosjonatan.com?subject=Solicitud%20de%20muestra%20gratuita%20(Teaching%20Materials)&body=Hola%2C%20quiero%20recibir%20la%20muestra%20gratuita%20de%20Teaching%20Materials.%20%C2%A1Gracias!" data-i18n="sm_cta">Quiero mi muestra gratis</a>
         </div>
       </div>
     </section>
@@ -306,29 +362,29 @@
             <span>JC</span>
           </div>
           <div class="cred-cards">
-            <div class="cred cred-1">🎓 Docente en lenguas modernas</div>
-            <div class="cred cred-2">⚖️ Abogado</div>
-            <div class="cred cred-3">🗣️ Especialista en metodologías comunicativas y MCER</div>
+            <div class="cred cred-1" data-i18n="cred1">🎓 Docente en lenguas modernas</div>
+            <div class="cred cred-2" data-i18n="cred2">⚖️ Abogado</div>
+            <div class="cred cred-3" data-i18n="cred3">🗣️ Especialista en metodologías comunicativas y MCER</div>
           </div>
         </div>
         <div class="about-copy">
           <div class="section-head reveal">
-            <p class="kicker kicker-coral">Hola, soy Jonatan 👋</p>
-            <h2>16 años haciendo que los idiomas <span class="hl hl-mint">se entiendan</span></h2>
+            <p class="kicker kicker-coral" data-i18n="ab_kicker">Hola, soy Jonatan 👋</p>
+            <h2 data-i18n="ab_h2">16 años haciendo que los idiomas <span class="hl hl-mint">se entiendan</span></h2>
           </div>
-          <p class="reveal">
-            Soy profesor de idiomas con una pasión por crear material pedagógico que realmente funcione
-            en el aula. Durante años, he visto cómo los profesores invierten horas preparando actividades
-            cuando podrían dedicar ese tiempo a conectar con sus estudiantes y mejorar su enseñanza.
+          <p class="reveal" data-i18n="ab_p1">
+            Soy profesor de idiomas con una pasión por crear clases y material pedagógico que realmente
+            funcionen. Durante años, he visto a estudiantes frustrados con métodos aburridos y a profesores
+            invirtiendo horas preparando actividades, cuando podrían dedicar ese tiempo a lo importante:
+            comunicarse y conectar.
           </p>
-          <p class="reveal">
-            Por eso creé <strong>Teaching Materials</strong>: para ofrecer a otros docentes el material que
-            yo hubiera querido tener cuando empecé. Clases estructuradas, progresivas y listas para usar,
-            sin perder calidad ni personalización. Cada pack está diseñado pensando en el profesor real,
-            con grupos diversos y tiempo limitado.
+          <p class="reveal" data-i18n="ab_p2">
+            Mi prioridad son las <strong>clases 1:1</strong>: sesiones estructuradas, progresivas y humanas,
+            donde hablas desde el primer día. Y para mis colegas docentes creé <strong>Teaching Materials</strong>,
+            los packs con el material que yo hubiera querido tener cuando empecé.
           </p>
-          <blockquote class="about-quote reveal">
-            «Recupera tus horas libres. Enseña más, prepara menos.»
+          <blockquote class="about-quote reveal" data-i18n="ab_quote">
+            «Un idioma no se memoriza: se vive, se habla y se disfruta.»
           </blockquote>
         </div>
       </div>
@@ -338,15 +394,15 @@
     <section class="section section-cream" id="testimonios">
       <div class="container">
         <div class="section-head center reveal">
-          <p class="kicker kicker-coral">Testimonios</p>
-          <h2>Profes que ya <span class="hl hl-yellow">respiran tranquilos</span></h2>
+          <p class="kicker kicker-coral" data-i18n="ts_kicker">Testimonios</p>
+          <h2 data-i18n="ts_h2">Gente que ya <span class="hl hl-yellow">respira tranquila</span></h2>
         </div>
 
         <div class="slider reveal" id="slider">
           <div class="slider-track" id="sliderTrack">
             <blockquote class="testimonial t-rot-l">
               <div class="stars" aria-hidden="true">★★★★★</div>
-              <p>«El nivel de detalle en las guías didácticas es impresionante. Me ha devuelto el placer de enseñar sin el estrés de la planificación.»</p>
+              <p data-i18n="ts1_p">«El nivel de detalle en las guías didácticas es impresionante. Me ha devuelto el placer de enseñar sin el estrés de la planificación.»</p>
               <footer><span class="t-avatar t-avatar--1">S</span><div><strong>Sarah M.</strong><span>Teacher – ESL</span></div></footer>
             </blockquote>
             <blockquote class="testimonial t-rot-r">
@@ -356,8 +412,8 @@
             </blockquote>
             <blockquote class="testimonial t-rot-l">
               <div class="stars" aria-hidden="true">★★★★★</div>
-              <p>«Material estéticamente impecable y pedagógicamente sólido. Una inversión que se paga sola en la primera semana.»</p>
-              <footer><span class="t-avatar t-avatar--3">L</span><div><strong>Laura G.</strong><span>Profesora de Español</span></div></footer>
+              <p data-i18n="ts3_p">«Material estéticamente impecable y pedagógicamente sólido. Una inversión que se paga sola en la primera semana.»</p>
+              <footer><span class="t-avatar t-avatar--3">L</span><div><strong>Laura G.</strong><span data-i18n="ts3_role">Profesora de Español</span></div></footer>
             </blockquote>
           </div>
           <div class="slider-dots" id="sliderDots" role="tablist" aria-label="Testimonios"></div>
@@ -369,38 +425,34 @@
     <section class="section" id="faq">
       <div class="container narrow">
         <div class="section-head center reveal">
-          <p class="kicker kicker-coral">Dudas exprés</p>
-          <h2>Lo que todos <span class="hl hl-sky">preguntan</span></h2>
+          <p class="kicker kicker-coral" data-i18n="fq_kicker">Dudas exprés</p>
+          <h2 data-i18n="fq_h2">Lo que todos <span class="hl hl-sky">preguntan</span></h2>
         </div>
 
         <div class="faq-list reveal">
           <details class="faq-item" open>
-            <summary>¿Los packs son un curso en video?<span class="faq-ico"></span></summary>
-            <div class="faq-body"><p>No. Son recursos pedagógicos profesionales (PDFs y archivos editables) diseñados para que tú, como profesor, los uses directamente en tus clases con tus alumnos.</p></div>
+            <summary><span data-i18n="fq1_q">¿Cuánto cuestan las clases 1:1?</span><span class="faq-ico"></span></summary>
+            <div class="faq-body"><p data-i18n="fq1_a">USD $22 por hora si vienes solo, $20 por hora cada uno si son 2, y $18 por hora cada uno si son 3 (el máximo por grupo). Se pagan vía PayPal y la conversación de diagnóstico inicial es gratuita.</p></div>
           </details>
           <details class="faq-item">
-            <summary>¿Cómo recibo el material después de comprar?<span class="faq-ico"></span></summary>
-            <div class="faq-body"><p>La entrega es digital e inmediata. Tras la compra segura en Hotmart, recibirás acceso a un área de descarga con todos los archivos del pack. El proceso es instantáneo y automático.</p></div>
+            <summary><span data-i18n="fq2_q">¿Cómo agendo mi primera clase?</span><span class="faq-ico"></span></summary>
+            <div class="faq-body"><p data-i18n="fq2_a">Escríbeme por WhatsApp. Te comparto niveles, horarios disponibles y una ruta recomendada según tu objetivo, y agendamos tu diagnóstico gratuito.</p></div>
           </details>
           <details class="faq-item">
-            <summary>¿En qué formato vienen los materiales?<span class="faq-ico"></span></summary>
-            <div class="faq-body"><p>Principalmente en PDF (listo para usar) y algunos en formato editable (Word, PowerPoint) para personalizarlos. Compatibles con Windows, Mac y Linux.</p></div>
+            <summary><span data-i18n="fq3_q">¿Los packs para profesores son un curso en video?</span><span class="faq-ico"></span></summary>
+            <div class="faq-body"><p data-i18n="fq3_a">No. Son recursos pedagógicos profesionales (PDFs y archivos editables) diseñados para que tú, como profesor, los uses directamente en tus clases con tus alumnos.</p></div>
           </details>
           <details class="faq-item">
-            <summary>¿Sirve para clases online y presenciales?<span class="faq-ico"></span></summary>
-            <div class="faq-body"><p>Sí, absolutamente. Puedes proyectarlo en clase presencial, compartirlo en pantalla durante videollamadas, enviarlo por email o imprimirlo sin restricciones.</p></div>
+            <summary><span data-i18n="fq4_q">¿Cómo recibo el material después de comprar?</span><span class="faq-ico"></span></summary>
+            <div class="faq-body"><p data-i18n="fq4_a">La entrega es digital e inmediata. Tras la compra segura en Hotmart, recibirás acceso a un área de descarga con todos los archivos del pack.</p></div>
           </details>
           <details class="faq-item">
-            <summary>¿Puedo pedir devolución si no me gusta?<span class="faq-ico"></span></summary>
-            <div class="faq-body"><p>Sí. Hotmart ofrece una garantía de satisfacción de 7 días. Si el material no cumple tus expectativas, puedes solicitar el reembolso completo durante ese período.</p></div>
+            <summary><span data-i18n="fq5_q">¿Puedo pedir devolución si un pack no me gusta?</span><span class="faq-ico"></span></summary>
+            <div class="faq-body"><p data-i18n="fq5_a">Sí. Hotmart ofrece una garantía de satisfacción de 7 días. Si el material no cumple tus expectativas, puedes solicitar el reembolso completo durante ese período.</p></div>
           </details>
           <details class="faq-item">
-            <summary>¿En qué idioma están las explicaciones?<span class="faq-ico"></span></summary>
-            <div class="faq-body"><p>Depende del pack: los packs para profesores hispanohablantes tienen explicaciones en español y los packs en francés, en francés. Cada producto lo especifica claramente.</p></div>
-          </details>
-          <details class="faq-item">
-            <summary>¿Cómo se pagan las clases 1:1?<span class="faq-ico"></span></summary>
-            <div class="faq-body"><p>Las clases se agendan por WhatsApp y aceptan pagos internacionales vía PayPal. Escríbeme y te comparto niveles, horarios disponibles y precios.</p></div>
+            <summary><span data-i18n="fq6_q">¿En qué formato vienen los materiales?</span><span class="faq-ico"></span></summary>
+            <div class="faq-body"><p data-i18n="fq6_a">Principalmente en PDF (listo para usar) y algunos en formato editable (Word, PowerPoint). Compatibles con Windows, Mac y Linux, para clases online o presenciales.</p></div>
           </details>
         </div>
       </div>
@@ -410,13 +462,13 @@
     <section class="section section-cta" id="contacto">
       <div class="container cta-card reveal">
         <span class="cta-spark" aria-hidden="true">✦</span>
-        <p class="kicker kicker-cream">Contacto</p>
-        <h2>Tu inglés no se va a<br>aprender <em>solo</em>.</h2>
-        <p class="lead">Escríbeme hoy y resolveré todas tus dudas sobre clases o materiales. Respondo en menos de 24 horas (días laborables).</p>
+        <p class="kicker kicker-cream" data-i18n="ct_kicker">Contacto</p>
+        <h2 data-i18n="ct_h2">Tu inglés no se va a<br>aprender <em>solo</em>.</h2>
+        <p class="lead" data-i18n="ct_lead">Escríbeme hoy y agendamos tu diagnóstico gratuito. Respondo en menos de 24 horas (días laborables).</p>
         <div class="cta-actions">
-          <a class="btn btn-yellow btn-lg" href="https://wa.me/16892960072?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20materiales%20y%2Fo%20clases%20particulares.%20%F0%9F%98%8A" target="_blank" rel="noopener noreferrer">
+          <a class="btn btn-yellow btn-lg" data-wa="general" href="https://wa.me/573148309306" target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2-1.42.25-.7.25-1.3.18-1.42-.08-.13-.28-.2-.58-.35M12.04 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.83 9.83 0 0 1 7 2.9 9.83 9.83 0 0 1 2.89 7c0 5.45-4.44 9.88-9.9 9.88m8.42-18.3A11.8 11.8 0 0 0 12.04 0C5.46 0 .1 5.35.1 11.92c0 2.1.55 4.15 1.6 5.96L0 24l6.27-1.64a11.94 11.94 0 0 0 5.76 1.47h.01c6.58 0 11.94-5.35 11.94-11.92 0-3.18-1.24-6.18-3.52-8.43"/></svg>
-            WhatsApp directo
+            <span data-i18n="ct_cta1">WhatsApp directo</span>
           </a>
           <a class="btn btn-cream-outline btn-lg" href="mailto:business@castellanosjonatan.com">✉️ business@castellanosjonatan.com</a>
         </div>
@@ -431,18 +483,19 @@
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="container footer-inner">
-      <p>© <span id="year"></span> Jonatan Castellanos · Teaching Materials. Todos los derechos reservados.</p>
+      <p>© <span id="year"></span> Jonatan Castellanos · Teaching Materials. <span data-i18n="ft_rights">Todos los derechos reservados.</span></p>
       <nav aria-label="Legal">
-        <a href="politicas.html">Privacidad, Términos y Cookies</a>
+        <a href="politicas.html" data-i18n="ft_legal">Privacidad, Términos y Cookies</a>
       </nav>
     </div>
   </footer>
 
   <!-- Botón flotante de WhatsApp -->
-  <a class="wa-float" href="https://wa.me/16892960072?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20materiales%20y%2Fo%20clases%20particulares.%20%F0%9F%98%8A" target="_blank" rel="noopener noreferrer" aria-label="Escribir por WhatsApp">
+  <a class="wa-float" data-wa="general" href="https://wa.me/573148309306" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
     <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2-1.42.25-.7.25-1.3.18-1.42-.08-.13-.28-.2-.58-.35M12.04 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.83 9.83 0 0 1 7 2.9 9.83 9.83 0 0 1 2.89 7c0 5.45-4.44 9.88-9.9 9.88m8.42-18.3A11.8 11.8 0 0 0 12.04 0C5.46 0 .1 5.35.1 11.92c0 2.1.55 4.15 1.6 5.96L0 24l6.27-1.64a11.94 11.94 0 0 0 5.76 1.47h.01c6.58 0 11.94-5.35 11.94-11.92 0-3.18-1.24-6.18-3.52-8.43"/></svg>
   </a>
 
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

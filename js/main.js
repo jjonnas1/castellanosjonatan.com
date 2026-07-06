@@ -57,17 +57,23 @@ document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el))
 
 /* ---------- Rotador de palabras del hero ---------- */
 const rotator = document.getElementById('rotator');
-if (rotator && !prefersReducedMotion) {
-  const words = ['inglés', 'English', 'español', 'como local'];
-  let i = 0;
-  setInterval(() => {
-    rotator.classList.add('swap');
-    setTimeout(() => {
-      i = (i + 1) % words.length;
-      rotator.textContent = words[i];
-      rotator.classList.remove('swap');
-    }, 350);
-  }, 3200);
+const rotatorWords = () =>
+  (window.I18N && I18N.words()) || ['inglés', 'English', 'español', 'como local'];
+
+if (rotator) {
+  rotator.textContent = rotatorWords()[0];
+  if (!prefersReducedMotion) {
+    let i = 0;
+    setInterval(() => {
+      rotator.classList.add('swap');
+      setTimeout(() => {
+        const words = rotatorWords();
+        i = (i + 1) % words.length;
+        rotator.textContent = words[i];
+        rotator.classList.remove('swap');
+      }, 350);
+    }, 3200);
+  }
 }
 
 /* ---------- Contadores animados ---------- */
