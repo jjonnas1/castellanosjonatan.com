@@ -1514,3 +1514,25 @@ img { max-width: 100%; display: block; }
   transform: rotate(-2deg);
   white-space: nowrap;
 }
+
+/* ---------- Guiño de abogado ---------- */
+.lawyer-plug {
+  margin-top: 1.8rem;
+  padding: 1rem 1.3rem;
+  background: var(--cream-2);
+  border: 2px dashed var(--ink);
+  border-radius: var(--radius-sm);
+  font-size: .95rem;
+  font-weight: 600;
+  color: var(--ink);
+  transform: rotate(-.5deg);
+}
+
+.lawyer-plug a {
+  color: var(--coral);
+  font-weight: 800;
+  text-decoration: none;
+  border-bottom: 2px solid var(--coral);
+}
+
+.lawyer-plug a:hover { color: var(--violet); border-color: var(--violet); }

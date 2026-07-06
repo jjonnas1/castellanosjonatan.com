@@ -184,6 +184,8 @@
     portrait_chip: '⚖️ Lawyer & 🎓 Language teacher',
     ab_quote: "«You don't memorize a language: you live it, speak it and enjoy it.»",
 
+    ab_lawyer: '⚖️ What if what you need isn\'t a language but a lawyer in Colombia? Objection sustained — I\'ve got you covered too: <a href="https://jonatancastellanosabogado.com" target="_blank" rel="noopener noreferrer">jonatancastellanosabogado.com</a> 😉',
+
     ts_kicker: 'Testimonials',
     ts_h2: 'People already <span class="hl hl-yellow">breathing easy</span>',
     ts1_p: '"The level of detail in the teaching guides is impressive. It gave me back the joy of teaching without the stress of planning."',
