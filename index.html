@@ -9,28 +9,34 @@
   <meta property="og:description" content="Clases 1:1 de inglés y español online + packs pedagógicos para profesores. 16 años de experiencia enseñando idiomas.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://castellanosjonatan.com/">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230f172a'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='30' font-weight='bold' fill='%23d4af37' text-anchor='middle'%3EJC%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23090e1d'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='30' font-weight='bold' fill='%23e8c15a' text-anchor='middle'%3EJC%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,600;1,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
+  <!-- Barra de progreso de scroll -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
   <!-- ===== NAVEGACIÓN ===== -->
   <header class="nav" id="nav">
     <div class="container nav-inner">
-      <a href="#inicio" class="brand">
-        <span class="brand-name">Jonatan Castellanos</span>
-        <span class="brand-tag">Profesor de Idiomas</span>
+      <a href="#inicio" class="brand" aria-label="Inicio">
+        <span class="brand-mono">JC</span>
+        <span class="brand-text">
+          <span class="brand-name">Jonatan Castellanos</span>
+          <span class="brand-tag">Profesor de Idiomas</span>
+        </span>
       </a>
       <nav class="nav-links" id="navLinks" aria-label="Navegación principal">
-        <a href="#inicio">Inicio</a>
-        <a href="#clases">Clases 1:1</a>
-        <a href="#packs">Packs para Profesores</a>
-        <a href="#sobre-mi">Sobre mí</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contacto" class="nav-cta">Contacto</a>
+        <a href="#clases" data-nav>Clases 1:1</a>
+        <a href="#packs" data-nav>Packs</a>
+        <a href="#sobre-mi" data-nav>Sobre mí</a>
+        <a href="#testimonios" data-nav>Testimonios</a>
+        <a href="#faq" data-nav>FAQ</a>
+        <a href="#contacto" class="nav-cta">Escríbeme</a>
       </nav>
       <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -42,175 +48,290 @@
 
     <!-- ===== HERO ===== -->
     <section class="hero" id="inicio">
-      <div class="container hero-inner">
-        <p class="hero-kicker reveal">Clases privadas 1:1 · Enfoque comunicativo · Resultados visibles</p>
-        <h1 class="reveal">Jonatan Castellanos</h1>
-        <p class="hero-sub reveal">Profesor de Idiomas · Inglés &amp; Español</p>
-        <p class="hero-desc reveal">
-          Clases particulares con metodología clara, práctica y comunicativa,
-          y material pedagógico profesional que ahorra horas de preparación a otros docentes.
-        </p>
-        <div class="hero-actions reveal">
-          <a class="btn btn-gold" href="https://wa.me/16892960072?text=Hola%2C%20quiero%20clases%20particulares%201%3A1%20de%20ingl%C3%A9s%20o%20espa%C3%B1ol.%20%C2%BFMe%20das%20info%20de%20horarios%2C%20precios%20y%20niveles%3F%20%F0%9F%98%8A" target="_blank" rel="noopener noreferrer">Quiero clases 1:1</a>
-          <a class="btn btn-outline-light" href="#packs">Ver packs para profesores</a>
-        </div>
-        <ul class="hero-badges reveal">
-          <li>16 años de experiencia</li>
-          <li>Online · Horarios flexibles</li>
-          <li>Pagos internacionales vía PayPal</li>
-        </ul>
+      <div class="hero-bg" aria-hidden="true">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="hero-grid"></div>
       </div>
+
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="hero-eyebrow reveal">
+            <span class="pulse-dot"></span> Cupos abiertos · Clases online 1:1
+          </p>
+          <h1 class="reveal d-1">
+            Aprende a<br>
+            <span class="rotator-wrap"><span class="rotator" id="rotator">hablar inglés</span></span><br>
+            de verdad.
+          </h1>
+          <p class="hero-desc reveal d-2">
+            Soy <strong>Jonatan Castellanos</strong>, profesor de idiomas con 16 años de experiencia.
+            Clases 1:1 de <strong>inglés</strong> y <strong>español</strong> con método comunicativo,
+            y packs pedagógicos que ahorran horas de trabajo a otros profesores.
+          </p>
+          <div class="hero-actions reveal d-3">
+            <a class="btn btn-gold btn-lg" href="https://wa.me/16892960072?text=Hola%2C%20quiero%20clases%20particulares%201%3A1%20de%20ingl%C3%A9s%20o%20espa%C3%B1ol.%20%C2%BFMe%20das%20info%20de%20horarios%2C%20precios%20y%20niveles%3F%20%F0%9F%98%8A" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2-1.42.25-.7.25-1.3.18-1.42-.08-.13-.28-.2-.58-.35M12.04 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.83 9.83 0 0 1 7 2.9 9.83 9.83 0 0 1 2.89 7c0 5.45-4.44 9.88-9.9 9.88m8.42-18.3A11.8 11.8 0 0 0 12.04 0C5.46 0 .1 5.35.1 11.92c0 2.1.55 4.15 1.6 5.96L0 24l6.27-1.64a11.94 11.94 0 0 0 5.76 1.47h.01c6.58 0 11.94-5.35 11.94-11.92 0-3.18-1.24-6.18-3.52-8.43"/></svg>
+              Quiero clases 1:1
+            </a>
+            <a class="btn btn-ghost btn-lg" href="#packs">Soy profe, ver packs →</a>
+          </div>
+
+          <dl class="hero-stats reveal d-4">
+            <div><dt data-counter="16">0</dt><dd>años enseñando</dd></div>
+            <div><dt data-counter="100" data-prefix="+">0</dt><dd>actividades por pack</dd></div>
+            <div><dt data-counter="24" data-prefix="&lt;" data-suffix="h">0</dt><dd>tiempo de respuesta</dd></div>
+            <div><dt data-counter="7" data-suffix=" días">0</dt><dd>de garantía Hotmart</dd></div>
+          </dl>
+        </div>
+
+        <!-- Mock de chat animado -->
+        <div class="hero-visual reveal d-2" aria-hidden="true">
+          <div class="chat-card float">
+            <div class="chat-head">
+              <span class="chat-avatar">JC</span>
+              <div class="chat-id">
+                <strong>Jonatan · Profesor</strong>
+                <span><i class="online-dot"></i> en línea</span>
+              </div>
+            </div>
+            <div class="chat-body" id="chatBody">
+              <div class="msg msg-in" data-step="0">Hola Jonatan 👋 Necesito inglés para una entrevista de trabajo…</div>
+              <div class="msg msg-out" data-step="1">¡Perfecto! Empezamos con un diagnóstico y armamos tu plan con metas semanales 🎯</div>
+              <div class="msg msg-in" data-step="2">Great! When can we start? 😄</div>
+              <div class="msg msg-out" data-step="3">That's the spirit! 🚀 Esta misma semana.</div>
+              <div class="msg msg-typing" data-step="4"><span></span><span></span><span></span></div>
+            </div>
+            <div class="chat-foot">
+              <span>Escribe un mensaje…</span>
+              <span class="chat-send">➤</span>
+            </div>
+          </div>
+          <div class="tag-chip chip-a float-slow">🇬🇧 English A1–B1</div>
+          <div class="tag-chip chip-b float-slower">🇪🇸 Español ELE</div>
+          <div class="tag-chip chip-c float-slow">📚 Packs para profes</div>
+        </div>
+      </div>
+
+      <a class="hero-scroll" href="#ribbon" aria-label="Bajar">
+        <span></span>
+      </a>
     </section>
+
+    <!-- ===== MARQUEE ===== -->
+    <div class="ribbon" id="ribbon" aria-hidden="true">
+      <div class="ribbon-track">
+        <span>Clases privadas 1:1</span><i>◆</i>
+        <span>Enfoque comunicativo</span><i>◆</i>
+        <span>Resultados visibles</span><i>◆</i>
+        <span>Material alineado al MCER</span><i>◆</i>
+        <span>Pagos internacionales vía PayPal</span><i>◆</i>
+        <span>Clases privadas 1:1</span><i>◆</i>
+        <span>Enfoque comunicativo</span><i>◆</i>
+        <span>Resultados visibles</span><i>◆</i>
+        <span>Material alineado al MCER</span><i>◆</i>
+        <span>Pagos internacionales vía PayPal</span><i>◆</i>
+      </div>
+    </div>
 
     <!-- ===== CLASES 1:1 ===== -->
     <section class="section" id="clases">
       <div class="container">
-        <p class="section-kicker reveal">Clases particulares</p>
-        <h2 class="section-title reveal">Sesiones 1:1 diseñadas para que avances con seguridad</h2>
-        <p class="section-lead reveal">
-          Diagnóstico inicial, metas semanales y retroalimentación concreta para avanzar sin dudas.
-          Modalidad online con horarios flexibles.
-        </p>
+        <div class="section-head reveal">
+          <p class="kicker">Clases particulares</p>
+          <h2>Sesiones 1:1 hechas <em>a tu medida</em></h2>
+          <p class="lead">Diagnóstico inicial, metas semanales y retroalimentación concreta para avanzar sin dudas. Online y con horarios flexibles.</p>
+        </div>
 
-        <div class="grid-2">
-          <!-- Inglés -->
-          <article class="card card-class reveal" id="ingles">
-            <div class="card-class-head card-class-head--en">
-              <span class="card-tag">English · A1–B1</span>
-              <h3>Clases de Inglés</h3>
-            </div>
-            <div class="card-body">
-              <p>Enseñanza de inglés como lengua extranjera con enfoque comunicativo y progresión A1–B1.
-                 Explicaciones simples, práctica guiada y conversación activa desde el primer día.</p>
-              <ul class="checklist">
-                <li>Enfoque comunicativo + gramática funcional</li>
-                <li>Corrección inmediata y explicación comparativa (EN/ES)</li>
-                <li>Pronunciación más clara y natural</li>
-                <li>Mayor fluidez al hablar con confianza</li>
-                <li>Preparación para entrevistas, exámenes o viajes</li>
-              </ul>
-              <a class="btn btn-primary" href="https://wa.me/16892960072?text=Hola%2C%20quiero%20clases%20particulares%201%3A1%20de%20ingl%C3%A9s.%20%C2%BFMe%20das%20info%20de%20horarios%2C%20precios%20y%20niveles%3F%20%F0%9F%98%8A" target="_blank" rel="noopener noreferrer">Info y precios por WhatsApp</a>
+        <!-- Tabs -->
+        <div class="tabs reveal" role="tablist" aria-label="Idiomas">
+          <button class="tab active" id="tab-en" role="tab" aria-selected="true" aria-controls="panel-en" data-tab="en">🇬🇧 Inglés</button>
+          <button class="tab" id="tab-es" role="tab" aria-selected="false" aria-controls="panel-es" data-tab="es">🇪🇸 Español</button>
+          <span class="tab-glider" id="tabGlider"></span>
+        </div>
+
+        <div class="tab-panels reveal">
+          <article class="tab-panel active" id="panel-en" role="tabpanel" aria-labelledby="tab-en">
+            <div class="panel-grid">
+              <div class="panel-info">
+                <span class="level-badge">Progresión A1 → B1 · MCER</span>
+                <h3>Clases de Inglés</h3>
+                <p>Enseñanza de inglés como lengua extranjera con enfoque comunicativo. Explicaciones simples, práctica guiada y conversación activa desde el primer día.</p>
+                <ul class="checklist">
+                  <li>Enfoque comunicativo + gramática funcional</li>
+                  <li>Corrección inmediata y explicación comparativa (EN/ES)</li>
+                  <li>Pronunciación más clara y natural</li>
+                  <li>Mayor fluidez al hablar con confianza</li>
+                  <li>Preparación para entrevistas, exámenes o viajes</li>
+                </ul>
+                <a class="btn btn-primary" href="https://wa.me/16892960072?text=Hola%2C%20quiero%20clases%20particulares%201%3A1%20de%20ingl%C3%A9s.%20%C2%BFMe%20das%20info%20de%20horarios%2C%20precios%20y%20niveles%3F%20%F0%9F%98%8A" target="_blank" rel="noopener noreferrer">Info y precios por WhatsApp</a>
+              </div>
+              <div class="panel-steps">
+                <div class="step"><span class="step-n">1</span><div><strong>Diagnóstico gratuito</strong><p>Evaluamos tu nivel real y definimos tu objetivo.</p></div></div>
+                <div class="step"><span class="step-n">2</span><div><strong>Plan con metas semanales</strong><p>Una ruta clara: sabes qué practicas y por qué.</p></div></div>
+                <div class="step"><span class="step-n">3</span><div><strong>Resultados visibles</strong><p>Retroalimentación concreta en cada sesión.</p></div></div>
+              </div>
             </div>
           </article>
 
-          <!-- Español -->
-          <article class="card card-class reveal" id="espanol">
-            <div class="card-class-head card-class-head--es">
-              <span class="card-tag">Español · ELE</span>
-              <h3>Clases de Español</h3>
-            </div>
-            <div class="card-body">
-              <p>Español como lengua extranjera con metodología clara y comunicativa.
-                 Sesiones personalizadas para objetivos académicos, profesionales o de viaje con progresión real.</p>
-              <ul class="checklist">
-                <li>Actividades dinámicas adaptadas a tu nivel</li>
-                <li>Comprensión de estructuras clave sin memorizar</li>
-                <li>Material visual, práctico y reutilizable</li>
-                <li>Plan claro con metas semanales</li>
-                <li>Conversación activa desde la primera clase</li>
-              </ul>
-              <a class="btn btn-primary" href="https://wa.me/16892960072?text=Hola%2C%20quiero%20clases%20particulares%201%3A1%20de%20espa%C3%B1ol.%20%C2%BFMe%20das%20info%20de%20horarios%2C%20precios%20y%20niveles%3F%20%F0%9F%98%8A" target="_blank" rel="noopener noreferrer">Info y precios por WhatsApp</a>
+          <article class="tab-panel" id="panel-es" role="tabpanel" aria-labelledby="tab-es" hidden>
+            <div class="panel-grid">
+              <div class="panel-info">
+                <span class="level-badge level-badge--es">Español ELE · Todos los niveles</span>
+                <h3>Clases de Español</h3>
+                <p>Español como lengua extranjera con metodología clara y comunicativa. Sesiones personalizadas para objetivos académicos, profesionales o de viaje con progresión real.</p>
+                <ul class="checklist">
+                  <li>Actividades dinámicas adaptadas a tu nivel</li>
+                  <li>Comprensión de estructuras clave sin memorizar</li>
+                  <li>Material visual, práctico y reutilizable</li>
+                  <li>Plan claro con metas semanales</li>
+                  <li>Conversación activa desde la primera clase</li>
+                </ul>
+                <a class="btn btn-primary" href="https://wa.me/16892960072?text=Hola%2C%20quiero%20clases%20particulares%201%3A1%20de%20espa%C3%B1ol.%20%C2%BFMe%20das%20info%20de%20horarios%2C%20precios%20y%20niveles%3F%20%F0%9F%98%8A" target="_blank" rel="noopener noreferrer">Info y precios por WhatsApp</a>
+              </div>
+              <div class="panel-steps">
+                <div class="step"><span class="step-n">1</span><div><strong>Diagnóstico gratuito</strong><p>Evaluamos tu nivel real y definimos tu objetivo.</p></div></div>
+                <div class="step"><span class="step-n">2</span><div><strong>Plan con metas semanales</strong><p>Una ruta clara: sabes qué practicas y por qué.</p></div></div>
+                <div class="step"><span class="step-n">3</span><div><strong>Resultados visibles</strong><p>Retroalimentación concreta en cada sesión.</p></div></div>
+              </div>
             </div>
           </article>
         </div>
 
-        <p class="note reveal">Te digo niveles, horarios disponibles y una ruta recomendada según tu objetivo. Pagos internacionales disponibles vía PayPal.</p>
+        <p class="note reveal">Pagos internacionales disponibles vía <strong>PayPal</strong> · Te comparto niveles, horarios y una ruta recomendada según tu objetivo.</p>
       </div>
     </section>
 
     <!-- ===== PACKS / TEACHING MATERIALS ===== -->
     <section class="section section-dark" id="packs">
       <div class="container">
-        <p class="section-kicker section-kicker--gold reveal">Teaching Materials · Cursos en PDF</p>
-        <h2 class="section-title reveal">Packs pedagógicos para profesores de idiomas</h2>
-        <p class="section-lead reveal">
-          Material profesional listo para usar: estructura clara, enfoque comunicativo alineado al MCER
-          y guías didácticas incluidas. Compra segura a través de Hotmart con entrega digital inmediata
-          y garantía de satisfacción de 7 días.
-        </p>
+        <div class="section-head reveal">
+          <p class="kicker kicker--gold">Teaching Materials · Cursos en PDF</p>
+          <h2>Packs pedagógicos para <em>profesores</em></h2>
+          <p class="lead">Material profesional listo para usar: estructura clara, enfoque comunicativo alineado al MCER y guías didácticas incluidas. Compra segura vía Hotmart, entrega digital inmediata.</p>
+        </div>
 
-        <div class="grid-3">
-          <article class="card product reveal">
+        <!-- Filtros -->
+        <div class="filters reveal" role="group" aria-label="Filtrar packs por idioma">
+          <button class="filter active" data-filter="all">Todos</button>
+          <button class="filter" data-filter="ingles">Enseño inglés</button>
+          <button class="filter" data-filter="frances">Enseño francés</button>
+          <button class="filter" data-filter="espanol">Enseño español</button>
+          <button class="filter" data-filter="gramatica">Gramática</button>
+        </div>
+
+        <div class="products reveal" id="products">
+          <article class="product tilt" data-cat="ingles">
+            <div class="product-glow" aria-hidden="true"></div>
+            <span class="product-flag">🇬🇧</span>
             <span class="product-tag">English · For Teachers</span>
             <h3>English A1–A2</h3>
-            <p>Pack completo de clases A1–A2 con más de 100 actividades, explicaciones gramaticales y material visual para profesores de inglés.</p>
+            <p>Pack completo de clases con más de 100 actividades, explicaciones gramaticales y material visual para profesores de inglés.</p>
+            <ul class="product-feats"><li>+100 actividades</li><li>Guía didáctica</li><li>Material visual</li></ul>
             <a class="btn btn-gold btn-block" href="https://go.hotmart.com/B101364901X?dp=1" target="_blank" rel="noopener noreferrer">Ver en Hotmart</a>
           </article>
 
-          <article class="card product reveal">
+          <article class="product tilt" data-cat="frances">
+            <div class="product-glow" aria-hidden="true"></div>
+            <span class="product-flag">🇫🇷</span>
             <span class="product-tag">Français · A1–A2</span>
-            <h3>Pack Francés A1–A2 (MCER)</h3>
-            <p>Secuencias didácticas completas A1–A2 con enfoque comunicativo y gramática clara para profesores de francés.</p>
+            <h3>Pack Francés A1–A2</h3>
+            <p>Secuencias didácticas completas A1–A2 (MCER) con enfoque comunicativo y gramática clara para profesores de francés.</p>
+            <ul class="product-feats"><li>Secuencias completas</li><li>MCER</li><li>Gramática visual</li></ul>
             <a class="btn btn-gold btn-block" href="https://go.hotmart.com/C101601427N?dp=1" target="_blank" rel="noopener noreferrer">Ver en Hotmart</a>
           </article>
 
-          <article class="card product reveal">
-            <span class="product-tag">Français · Pour Professeurs</span>
+          <article class="product tilt" data-cat="ingles frances">
+            <div class="product-glow" aria-hidden="true"></div>
+            <span class="product-flag">🇬🇧🇫🇷</span>
+            <span class="product-tag">Pour Professeurs Francophones</span>
             <h3>Anglais pour profs</h3>
             <p>Le pack complet, prêt à l'emploi : contenu progressif et directement utilisable en classe, avec instructions en français.</p>
+            <ul class="product-feats"><li>Prêt à l'emploi</li><li>Instructions en FR</li><li>Activités communicatives</li></ul>
             <a class="btn btn-gold btn-block" href="https://go.hotmart.com/J101687014J?dp=1" target="_blank" rel="noopener noreferrer">Ver en Hotmart</a>
           </article>
 
-          <article class="card product reveal">
+          <article class="product tilt" data-cat="espanol">
+            <div class="product-glow" aria-hidden="true"></div>
+            <span class="product-flag">🇪🇸</span>
             <span class="product-tag">Spanish Toolkit · EN/ES</span>
             <h3>Teach Spanish Easy</h3>
             <p>Material bilingüe (EN/ES) listo para usar con actividades culturales y planes de clase completos.</p>
+            <ul class="product-feats"><li>Bilingüe EN/ES</li><li>Planes de clase</li><li>Cultura</li></ul>
             <a class="btn btn-gold btn-block" href="https://go.hotmart.com/I101326739A?dp=1" target="_blank" rel="noopener noreferrer">Ver en Hotmart</a>
           </article>
 
-          <article class="card product reveal">
+          <article class="product tilt product-featured" data-cat="gramatica ingles">
+            <div class="product-glow" aria-hidden="true"></div>
+            <span class="product-badge">★ Más completo</span>
+            <span class="product-flag">📖</span>
             <span class="product-tag">Gramática Completa</span>
             <h3>Grammar Master</h3>
             <p>Curso completo con explicaciones claras, estructura total y material organizado para dominar la gramática.</p>
+            <ul class="product-feats"><li>Estructura total</li><li>Explicaciones claras</li><li>Material organizado</li></ul>
             <a class="btn btn-gold btn-block" href="https://go.hotmart.com/B101403026Y?dp=1" target="_blank" rel="noopener noreferrer">Ver en Hotmart</a>
           </article>
 
-          <article class="card product product-help reveal">
+          <article class="product product-help" data-cat="all-always">
+            <span class="product-flag">🤝</span>
             <span class="product-tag">¿No sabes cuál elegir?</span>
             <h3>Te ayudo a decidir</h3>
             <p>Escríbeme por WhatsApp y te recomiendo el pack ideal según el idioma que enseñas, tu nivel y tu tipo de clase.</p>
-            <a class="btn btn-outline-light btn-block" href="https://wa.me/16892960072?text=Hola%2C%20soy%20profe.%20Quiero%20que%20me%20recomiendes%20el%20pack%20ideal%20seg%C3%BAn%20el%20idioma%20que%20ense%C3%B1o%20%F0%9F%98%8A" target="_blank" rel="noopener noreferrer">Consulta directa</a>
+            <a class="btn btn-ghost btn-block" href="https://wa.me/16892960072?text=Hola%2C%20soy%20profe.%20Quiero%20que%20me%20recomiendes%20el%20pack%20ideal%20seg%C3%BAn%20el%20idioma%20que%20ense%C3%B1o%20%F0%9F%98%8A" target="_blank" rel="noopener noreferrer">Consulta directa</a>
           </article>
         </div>
 
         <div class="perks reveal">
-          <div class="perk"><strong>Entrega inmediata</strong><span>Descarga automática tras la compra en Hotmart</span></div>
-          <div class="perk"><strong>Garantía de 7 días</strong><span>Reembolso completo si no cumple tus expectativas</span></div>
-          <div class="perk"><strong>Acceso de por vida</strong><span>Incluye actualizaciones sin costo adicional</span></div>
-          <div class="perk"><strong>Comunidad</strong><span>Grupo de WhatsApp con clases gratuitas semanales</span></div>
+          <div class="perk"><span class="perk-ico">⚡</span><div><strong>Entrega inmediata</strong><span>Descarga automática tras la compra en Hotmart</span></div></div>
+          <div class="perk"><span class="perk-ico">🛡️</span><div><strong>Garantía de 7 días</strong><span>Reembolso completo si no cumple tus expectativas</span></div></div>
+          <div class="perk"><span class="perk-ico">♾️</span><div><strong>Acceso de por vida</strong><span>Con actualizaciones sin costo adicional</span></div></div>
+          <div class="perk"><span class="perk-ico">👥</span><div><strong>Comunidad de profes</strong><span>Grupo de WhatsApp con clases gratuitas semanales</span></div></div>
         </div>
 
         <div class="sample reveal">
-          <h3>Muestra gratuita</h3>
-          <p>Descarga una muestra gratuita (3 actividades + guía) y comprueba el estándar del material.</p>
-          <a class="btn btn-outline-light" href="mailto:business@castellanosjonatan.com?subject=Solicitud%20de%20muestra%20gratuita%20(Teaching%20Materials)&body=Hola%2C%20quiero%20recibir%20la%20muestra%20gratuita%20de%20Teaching%20Materials.%20%C2%A1Gracias!">Solicitar muestra por email</a>
-          <p class="note-sm">Este botón abre tu app de correo con el mensaje listo.</p>
+          <div class="sample-copy">
+            <h3>Pruébalo gratis primero</h3>
+            <p>Descarga una muestra gratuita (3 actividades + guía) y comprueba el estándar del material antes de comprar.</p>
+          </div>
+          <a class="btn btn-outline-gold" href="mailto:business@castellanosjonatan.com?subject=Solicitud%20de%20muestra%20gratuita%20(Teaching%20Materials)&body=Hola%2C%20quiero%20recibir%20la%20muestra%20gratuita%20de%20Teaching%20Materials.%20%C2%A1Gracias!">Solicitar muestra gratuita</a>
         </div>
       </div>
     </section>
 
     <!-- ===== SOBRE MÍ ===== -->
     <section class="section" id="sobre-mi">
-      <div class="container narrow">
-        <p class="section-kicker reveal">Sobre mí</p>
-        <h2 class="section-title reveal">Quién está detrás de las clases y los packs</h2>
-        <div class="about reveal">
-          <p>
+      <div class="container about-grid">
+        <div class="about-visual reveal">
+          <div class="about-portrait">
+            <span>JC</span>
+            <div class="about-ring" aria-hidden="true"></div>
+          </div>
+          <div class="cred-cards">
+            <div class="cred">🎓 Docente en lenguas modernas</div>
+            <div class="cred">⚖️ Abogado</div>
+            <div class="cred">🗣️ Especialista en metodologías comunicativas y MCER</div>
+          </div>
+        </div>
+        <div class="about-copy">
+          <div class="section-head reveal">
+            <p class="kicker">Sobre mí</p>
+            <h2>El profe detrás de <em>todo esto</em></h2>
+          </div>
+          <p class="reveal">
             Soy profesor de idiomas con una pasión por crear material pedagógico que realmente funcione
             en el aula. Durante años, he visto cómo los profesores invierten horas preparando actividades
             cuando podrían dedicar ese tiempo a conectar con sus estudiantes y mejorar su enseñanza.
           </p>
-          <p>
+          <p class="reveal">
             Por eso creé <strong>Teaching Materials</strong>: para ofrecer a otros docentes el material que
             yo hubiera querido tener cuando empecé. Clases estructuradas, progresivas y listas para usar,
             sin perder calidad ni personalización. Cada pack está diseñado pensando en el profesor real,
             con grupos diversos y tiempo limitado.
           </p>
-          <ul class="checklist checklist-about">
-            <li>16 años de experiencia enseñando idiomas</li>
-            <li>Docente en lenguas modernas y abogado</li>
-            <li>Especialista en metodologías comunicativas y MCER</li>
-          </ul>
+          <blockquote class="about-quote reveal">
+            «Recupera tus horas libres. Enseña más, prepara menos.»
+          </blockquote>
         </div>
       </div>
     </section>
@@ -218,21 +339,30 @@
     <!-- ===== TESTIMONIOS ===== -->
     <section class="section section-soft" id="testimonios">
       <div class="container">
-        <p class="section-kicker reveal">Testimonios</p>
-        <h2 class="section-title reveal">Lo que dicen otros profesores</h2>
-        <div class="grid-3">
-          <blockquote class="testimonial reveal">
-            <p>«El nivel de detalle en las guías didácticas es impresionante. Me ha devuelto el placer de enseñar sin el estrés de la planificación.»</p>
-            <footer><strong>Sarah M.</strong> · Teacher – ESL</footer>
-          </blockquote>
-          <blockquote class="testimonial reveal">
-            <p>«Enfin des ressources modernes et pertinentes. Mes élèves sont plus engagés et la progression est évidente.»</p>
-            <footer><strong>Jean-Pierre</strong> · Professeur de FLE</footer>
-          </blockquote>
-          <blockquote class="testimonial reveal">
-            <p>«Material estéticamente impecable y pedagógicamente sólido. Una inversión que se paga sola en la primera semana.»</p>
-            <footer><strong>Laura G.</strong> · Profesora de Español</footer>
-          </blockquote>
+        <div class="section-head center reveal">
+          <p class="kicker">Testimonios</p>
+          <h2>Lo que dicen otros <em>profesores</em></h2>
+        </div>
+
+        <div class="slider reveal" id="slider">
+          <div class="slider-track" id="sliderTrack">
+            <blockquote class="testimonial">
+              <div class="stars" aria-hidden="true">★★★★★</div>
+              <p>«El nivel de detalle en las guías didácticas es impresionante. Me ha devuelto el placer de enseñar sin el estrés de la planificación.»</p>
+              <footer><span class="t-avatar t-avatar--1">S</span><div><strong>Sarah M.</strong><span>Teacher – ESL</span></div></footer>
+            </blockquote>
+            <blockquote class="testimonial">
+              <div class="stars" aria-hidden="true">★★★★★</div>
+              <p>«Enfin des ressources modernes et pertinentes. Mes élèves sont plus engagés et la progression est évidente.»</p>
+              <footer><span class="t-avatar t-avatar--2">JP</span><div><strong>Jean-Pierre</strong><span>Professeur de FLE</span></div></footer>
+            </blockquote>
+            <blockquote class="testimonial">
+              <div class="stars" aria-hidden="true">★★★★★</div>
+              <p>«Material estéticamente impecable y pedagógicamente sólido. Una inversión que se paga sola en la primera semana.»</p>
+              <footer><span class="t-avatar t-avatar--3">L</span><div><strong>Laura G.</strong><span>Profesora de Español</span></div></footer>
+            </blockquote>
+          </div>
+          <div class="slider-dots" id="sliderDots" role="tablist" aria-label="Testimonios"></div>
         </div>
       </div>
     </section>
@@ -240,58 +370,61 @@
     <!-- ===== FAQ ===== -->
     <section class="section" id="faq">
       <div class="container narrow">
-        <p class="section-kicker reveal">Preguntas frecuentes</p>
-        <h2 class="section-title reveal">Todo lo que necesitas saber</h2>
+        <div class="section-head center reveal">
+          <p class="kicker">Preguntas frecuentes</p>
+          <h2>Resuelve tus <em>dudas</em></h2>
+        </div>
 
         <div class="faq-list reveal">
-          <details class="faq-item">
-            <summary>¿Los packs son un curso en video?</summary>
-            <p>No. Son recursos pedagógicos profesionales (PDFs y archivos editables) diseñados para que tú, como profesor, los uses directamente en tus clases con tus alumnos.</p>
+          <details class="faq-item" open>
+            <summary>¿Los packs son un curso en video?<span class="faq-ico"></span></summary>
+            <div class="faq-body"><p>No. Son recursos pedagógicos profesionales (PDFs y archivos editables) diseñados para que tú, como profesor, los uses directamente en tus clases con tus alumnos.</p></div>
           </details>
           <details class="faq-item">
-            <summary>¿Cómo recibo el material después de comprar?</summary>
-            <p>La entrega es digital e inmediata. Tras la compra segura en Hotmart, recibirás acceso a un área de descarga con todos los archivos del pack. El proceso es instantáneo y automático.</p>
+            <summary>¿Cómo recibo el material después de comprar?<span class="faq-ico"></span></summary>
+            <div class="faq-body"><p>La entrega es digital e inmediata. Tras la compra segura en Hotmart, recibirás acceso a un área de descarga con todos los archivos del pack. El proceso es instantáneo y automático.</p></div>
           </details>
           <details class="faq-item">
-            <summary>¿En qué formato vienen los materiales?</summary>
-            <p>Principalmente en PDF (listo para usar) y algunos en formato editable (Word, PowerPoint) para personalizarlos. Compatibles con Windows, Mac y Linux.</p>
+            <summary>¿En qué formato vienen los materiales?<span class="faq-ico"></span></summary>
+            <div class="faq-body"><p>Principalmente en PDF (listo para usar) y algunos en formato editable (Word, PowerPoint) para personalizarlos. Compatibles con Windows, Mac y Linux.</p></div>
           </details>
           <details class="faq-item">
-            <summary>¿Sirve para clases online y presenciales?</summary>
-            <p>Sí, absolutamente. Puedes proyectarlo en clase presencial, compartirlo en pantalla durante videollamadas, enviarlo por email o imprimirlo sin restricciones.</p>
+            <summary>¿Sirve para clases online y presenciales?<span class="faq-ico"></span></summary>
+            <div class="faq-body"><p>Sí, absolutamente. Puedes proyectarlo en clase presencial, compartirlo en pantalla durante videollamadas, enviarlo por email o imprimirlo sin restricciones.</p></div>
           </details>
           <details class="faq-item">
-            <summary>¿Puedo pedir devolución si no me gusta?</summary>
-            <p>Sí. Hotmart ofrece una garantía de satisfacción de 7 días. Si el material no cumple tus expectativas, puedes solicitar el reembolso completo durante ese período.</p>
+            <summary>¿Puedo pedir devolución si no me gusta?<span class="faq-ico"></span></summary>
+            <div class="faq-body"><p>Sí. Hotmart ofrece una garantía de satisfacción de 7 días. Si el material no cumple tus expectativas, puedes solicitar el reembolso completo durante ese período.</p></div>
           </details>
           <details class="faq-item">
-            <summary>¿En qué idioma están las explicaciones?</summary>
-            <p>Depende del pack: los packs para profesores hispanohablantes tienen explicaciones en español y los packs en francés, en francés. Cada producto lo especifica claramente.</p>
+            <summary>¿En qué idioma están las explicaciones?<span class="faq-ico"></span></summary>
+            <div class="faq-body"><p>Depende del pack: los packs para profesores hispanohablantes tienen explicaciones en español y los packs en francés, en francés. Cada producto lo especifica claramente.</p></div>
           </details>
           <details class="faq-item">
-            <summary>¿Cómo se pagan las clases 1:1?</summary>
-            <p>Las clases se agendan por WhatsApp y aceptan pagos internacionales vía PayPal. Escríbeme y te comparto niveles, horarios disponibles y precios.</p>
+            <summary>¿Cómo se pagan las clases 1:1?<span class="faq-ico"></span></summary>
+            <div class="faq-body"><p>Las clases se agendan por WhatsApp y aceptan pagos internacionales vía PayPal. Escríbeme y te comparto niveles, horarios disponibles y precios.</p></div>
           </details>
         </div>
       </div>
     </section>
 
-    <!-- ===== CONTACTO ===== -->
-    <section class="section section-dark section-contact" id="contacto">
-      <div class="container narrow center">
-        <p class="section-kicker section-kicker--gold reveal">Contacto</p>
-        <h2 class="section-title reveal">¿Hablamos?</h2>
-        <p class="section-lead reveal">Escríbeme directamente y resolveré todas tus dudas sobre clases o materiales. Respondo en menos de 24 horas (días laborables).</p>
-
-        <div class="contact-actions reveal">
-          <a class="btn btn-gold" href="https://wa.me/16892960072?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20materiales%20y%2Fo%20clases%20particulares.%20%F0%9F%98%8A" target="_blank" rel="noopener noreferrer">WhatsApp directo</a>
-          <a class="btn btn-outline-light" href="mailto:business@castellanosjonatan.com">business@castellanosjonatan.com</a>
+    <!-- ===== CTA FINAL / CONTACTO ===== -->
+    <section class="section section-cta" id="contacto">
+      <div class="container cta-card reveal">
+        <div class="cta-bg" aria-hidden="true"></div>
+        <p class="kicker kicker--gold">Contacto</p>
+        <h2>¿Empezamos <em>hoy</em>?</h2>
+        <p class="lead">Escríbeme directamente y resolveré todas tus dudas sobre clases o materiales. Respondo en menos de 24 horas (días laborables).</p>
+        <div class="cta-actions">
+          <a class="btn btn-gold btn-lg" href="https://wa.me/16892960072?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20materiales%20y%2Fo%20clases%20particulares.%20%F0%9F%98%8A" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2-1.42.25-.7.25-1.3.18-1.42-.08-.13-.28-.2-.58-.35M12.04 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.83 9.83 0 0 1 7 2.9 9.83 9.83 0 0 1 2.89 7c0 5.45-4.44 9.88-9.9 9.88m8.42-18.3A11.8 11.8 0 0 0 12.04 0C5.46 0 .1 5.35.1 11.92c0 2.1.55 4.15 1.6 5.96L0 24l6.27-1.64a11.94 11.94 0 0 0 5.76 1.47h.01c6.58 0 11.94-5.35 11.94-11.92 0-3.18-1.24-6.18-3.52-8.43"/></svg>
+            WhatsApp directo
+          </a>
+          <a class="btn btn-ghost btn-lg" href="mailto:business@castellanosjonatan.com">✉️ business@castellanosjonatan.com</a>
         </div>
-
-        <div class="socials reveal">
-          <a href="https://www.instagram.com/profekit_bycastellanos/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
-          <span aria-hidden="true">·</span>
-          <a href="https://www.facebook.com/profile.php?id=61579380569665" target="_blank" rel="noopener noreferrer" aria-label="Facebook">Facebook</a>
+        <div class="socials">
+          <a href="https://www.instagram.com/profekit_bycastellanos/" target="_blank" rel="noopener noreferrer">Instagram <span>@profekit_bycastellanos</span></a>
+          <a href="https://www.facebook.com/profile.php?id=61579380569665" target="_blank" rel="noopener noreferrer">Facebook</a>
         </div>
       </div>
     </section>
@@ -306,6 +439,11 @@
       </nav>
     </div>
   </footer>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a class="wa-float" href="https://wa.me/16892960072?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20materiales%20y%2Fo%20clases%20particulares.%20%F0%9F%98%8A" target="_blank" rel="noopener noreferrer" aria-label="Escribir por WhatsApp">
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2-1.42.25-.7.25-1.3.18-1.42-.08-.13-.28-.2-.58-.35M12.04 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.83 9.83 0 0 1 7 2.9 9.83 9.83 0 0 1 2.89 7c0 5.45-4.44 9.88-9.9 9.88m8.42-18.3A11.8 11.8 0 0 0 12.04 0C5.46 0 .1 5.35.1 11.92c0 2.1.55 4.15 1.6 5.96L0 24l6.27-1.64a11.94 11.94 0 0 0 5.76 1.47h.01c6.58 0 11.94-5.35 11.94-11.92 0-3.18-1.24-6.18-3.52-8.43"/></svg>
+  </a>
 
   <script src="js/main.js"></script>
 </body>
