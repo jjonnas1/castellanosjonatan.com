@@ -58,7 +58,7 @@ document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el))
 /* ---------- Rotador de palabras del hero ---------- */
 const rotator = document.getElementById('rotator');
 if (rotator && !prefersReducedMotion) {
-  const words = ['hablar inglés', 'speak English', 'hablar español', 'enseñar mejor'];
+  const words = ['inglés', 'English', 'español', 'como local'];
   let i = 0;
   setInterval(() => {
     rotator.classList.add('swap');
