@@ -174,13 +174,14 @@
     sm_p: 'Download a free sample (3 activities + guide) and check the quality of the material before buying.',
     sm_cta: 'Get my free sample',
 
-    cred1: '🎓 Modern languages teacher',
+    cred1: '🎓 Degree in modern languages',
     cred2: '⚖️ Lawyer',
     cred3: '🗣️ Specialist in communicative methodologies and CEFR',
     ab_kicker: "Hi, I'm Jonatan 👋",
     ab_h2: '16 years making languages <span class="hl hl-mint">make sense</span>',
-    ab_p1: "I'm a language teacher passionate about creating classes and teaching materials that actually work. For years I've watched students get frustrated with boring methods, and teachers spend hours preparing activities instead of doing what matters: communicating and connecting.",
+    ab_p1: 'Does the photo look very \'lawyer\'? That\'s because I am one 😄. I hold <strong>degrees in modern languages and law</strong>, and that mix shaped the way I teach: a jurist\'s clarity and structure, with the passion of a teacher who\'s spent 16 years making languages finally make sense.',
     ab_p2: 'My priority is <strong>1:1 classes</strong>: structured, progressive, human sessions where you speak from day one. And for my fellow teachers I created <strong>Teaching Materials</strong> — the packs I wish I had when I started.',
+    portrait_chip: '⚖️ Lawyer & 🎓 Language teacher',
     ab_quote: "«You don't memorize a language: you live it, speak it and enjoy it.»",
 
     ts_kicker: 'Testimonials',

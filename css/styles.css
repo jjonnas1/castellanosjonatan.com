@@ -1494,3 +1494,23 @@ img { max-width: 100%; display: block; }
   object-fit: cover;
   border-radius: inherit;
 }
+
+/* ---------- Sticker sobre la foto ---------- */
+.about-visual { position: relative; }
+
+.portrait-chip {
+  position: relative;
+  z-index: 2;
+  width: fit-content;
+  margin: -1.4rem auto 0;
+  padding: .55rem 1.1rem;
+  background: var(--yellow);
+  border: var(--bw) solid var(--ink);
+  border-radius: 999px;
+  box-shadow: var(--hs-sm);
+  font-weight: 800;
+  font-size: .88rem;
+  color: var(--ink);
+  transform: rotate(-2deg);
+  white-space: nowrap;
+}
