@@ -179,7 +179,7 @@
     cred3: '🗣️ Specialist in communicative methodologies and CEFR',
     ab_kicker: "Hi, I'm Jonatan 👋",
     ab_h2: '16 years making languages <span class="hl hl-mint">make sense</span>',
-    ab_p1: 'Does the photo look very \'lawyer\'? That\'s because I am one 😄. I hold <strong>degrees in modern languages and law</strong>, and that mix shaped the way I teach: a jurist\'s clarity and structure, with the passion of a teacher who\'s spent 16 years making languages finally make sense.',
+    ab_p1: 'A teacher who\'s also a lawyer? You read that right 😄. I hold <strong>degrees in modern languages and law</strong>, and that mix shaped the way I teach: a jurist\'s clarity and structure, with the passion of a teacher who\'s spent 16 years making languages finally make sense.',
     ab_p2: 'My priority is <strong>1:1 classes</strong>: structured, progressive, human sessions where you speak from day one. And for my fellow teachers I created <strong>Teaching Materials</strong> — the packs I wish I had when I started.',
     portrait_chip: '⚖️ Lawyer & 🎓 Language teacher',
     ab_quote: "«You don't memorize a language: you live it, speak it and enjoy it.»",
