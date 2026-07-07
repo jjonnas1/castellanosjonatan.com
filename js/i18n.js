@@ -41,7 +41,7 @@
     hero_eyebrow: 'Spots open · 1:1 online classes',
     hero_t1: 'Speak',
     hero_t2: 'with confidence.',
-    hero_desc: "I'm <strong>Jonatan Castellanos</strong> and I've spent 16 years making languages finally make sense. 1:1 <strong>English</strong> and <strong>Spanish</strong> classes that feel like a conversation, not homework.",
+    hero_desc: "I'm <strong>Jonatan Castellanos</strong> and I've spent 16 years making languages finally make sense. 1:1 online <strong>English</strong> and <strong>Spanish</strong> classes that feel like a conversation, not homework.",
     hero_cta1: 'Start on WhatsApp',
     hero_cta2: 'See pricing →',
     stat_1: 'years teaching',
@@ -217,12 +217,12 @@
 
   const META = {
     es: {
-      title: 'Jonatan Castellanos · Profesor de Idiomas | Habla inglés sin miedo',
-      desc: 'Clases particulares 1:1 de inglés y español desde 18 USD/hora. Metodología clara, práctica y comunicativa. Material pedagógico profesional para profesores de idiomas.'
+      title: 'Clases de Inglés y Español Online 1:1 | Jonatan Castellanos',
+      desc: 'Clases particulares de inglés y español online desde 18 USD/hora, con profesor de 16 años de experiencia. Diagnóstico gratis por WhatsApp y packs en PDF para profesores de idiomas.'
     },
     en: {
-      title: 'Jonatan Castellanos · Language Teacher | Speak Spanish with confidence',
-      desc: '1:1 private English and Spanish classes from 18 USD/hour. Clear, practical, communicative method. Professional teaching materials for language teachers.'
+      title: 'Online English & Spanish Classes 1:1 | Jonatan Castellanos',
+      desc: 'Private online English and Spanish classes from 18 USD/hour with a teacher with 16 years of experience. Free level check via WhatsApp and PDF packs for teachers.'
     }
   };
 
