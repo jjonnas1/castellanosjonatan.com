@@ -1536,3 +1536,43 @@ img { max-width: 100%; display: block; }
 }
 
 .lawyer-plug a:hover { color: var(--violet); border-color: var(--violet); }
+
+/* ---------- Promo del test de nivel ---------- */
+.quiz-promo {
+  padding: 3.5rem 0;
+  background: var(--cream-2);
+  border-block: var(--bw) solid var(--ink);
+}
+
+.quiz-promo-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.quiz-promo-copy { max-width: 560px; }
+
+.quiz-promo-copy h2 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.5rem, 3.4vw, 2.1rem);
+  color: var(--ink);
+  letter-spacing: -.01em;
+  margin-bottom: .5rem;
+}
+
+.quiz-promo-copy .lead { font-size: .98rem; margin-bottom: 0; }
+
+.quiz-promo-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+@media (max-width: 720px) {
+  .quiz-promo-inner { flex-direction: column; align-items: stretch; text-align: center; }
+  .quiz-promo-actions { justify-content: center; }
+  .quiz-promo-actions .btn { flex: 1; min-width: 160px; }
+}

@@ -36,6 +36,7 @@
     nav_precios: 'Pricing',
     nav_packs: 'Teacher Shop',
     nav_sobre: 'About me',
+    nav_test: 'Level Test',
     nav_cta: 'Say hi 👋',
 
     hero_eyebrow: 'Spots open · 1:1 online classes',
@@ -186,6 +187,12 @@
 
     ab_lawyer: '⚖️ What if what you need isn\'t a language but a lawyer in Colombia? Objection sustained — I\'ve got you covered too: <a href="https://jonatancastellanosabogado.com" target="_blank" rel="noopener noreferrer">jonatancastellanosabogado.com</a> 😉',
 
+    qp_kicker: 'Free · 5 minutes',
+    qp_h2: "What's your real level?",
+    qp_lead: 'Answer 20 questions and discover your CEFR level (A1–B2) instantly, with a class recommendation made for you.',
+    qp_test_en: 'Test my English',
+    qp_test_es: 'Test my Spanish',
+
     ts_kicker: 'Testimonials',
     ts_h2: 'People already <span class="hl hl-yellow">breathing easy</span>',
     ts1_p: '"The level of detail in the teaching guides is impressive. It gave me back the joy of teaching without the stress of planning."',
@@ -272,9 +279,11 @@
     if (sample) sample.href = SAMPLE_MAILTO[lang];
 
     document.documentElement.lang = lang;
-    document.title = META[lang].title;
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) metaDesc.setAttribute('content', META[lang].desc);
+    if (!document.body.hasAttribute('data-static-meta')) {
+      document.title = META[lang].title;
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) metaDesc.setAttribute('content', META[lang].desc);
+    }
 
     const toggle = document.getElementById('langToggle');
     if (toggle) toggle.textContent = lang === 'es' ? 'EN' : 'ES';

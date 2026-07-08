@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test de Nivel de Inglés y Español Gratis | Jonatan Castellanos</title>
+  <meta name="description" content="Descubre gratis tu nivel de inglés o español (A1–B2) en 5 minutos. Recibe tu resultado y una recomendación de clases personalizada.">
+  <link rel="canonical" href="https://castellanosjonatan.com/test-nivel.html">
+  <meta property="og:title" content="Test de Nivel de Inglés y Español Gratis">
+  <meta property="og:description" content="Descubre gratis tu nivel (A1–B2) en 5 minutos y recibe una recomendación de clases personalizada.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://castellanosjonatan.com/test-nivel.html">
+  <meta property="og:image" content="https://castellanosjonatan.com/assets/og-cover.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23ff4f30'/%3E%3Ctext x='32' y='45' font-family='Arial Black,sans-serif' font-size='28' font-weight='900' fill='%23fff6ec' text-anchor='middle'%3EJC%3C/text%3E%3C/svg%3E">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/quiz.css">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18056733453"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18056733453');
+  </script>
+</head>
+<body data-static-meta>
+
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand" aria-label="Inicio">
+        <span class="brand-mono">JC</span>
+        <span class="brand-text">
+          <span class="brand-name">Jonatan Castellanos</span>
+          <span class="brand-tag" data-i18n="brand_tag">Profesor de Idiomas</span>
+        </span>
+      </a>
+      <nav class="nav-links" id="navLinks" aria-label="Navegación principal">
+        <a href="index.html#clases" data-i18n="nav_clases">Clases 1:1</a>
+        <a href="index.html#precios" data-i18n="nav_precios">Precios</a>
+        <a href="index.html#packs" data-i18n="nav_packs">Tienda del Profe</a>
+        <a href="index.html#sobre-mi" data-i18n="nav_sobre">Sobre mí</a>
+        <a href="index.html#contacto" class="nav-cta" data-i18n="nav_cta">Escríbeme 👋</a>
+      </nav>
+      <div class="nav-side">
+        <button class="lang-toggle" id="langToggle" aria-label="Switch language">EN</button>
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="quiz-hero">
+      <div class="container quiz-shell">
+
+        <!-- ===== Selección de idioma ===== -->
+        <div id="quizIntro">
+          <div class="quiz-head">
+            <p class="kicker kicker-coral" style="display:inline-block">Test gratis · 5 minutos</p>
+            <h1>¿Cuál es tu nivel real? / What's your real level?</h1>
+            <p>20 preguntas, resultado inmediato alineado al MCER (A1–B2). Elige qué idioma quieres evaluar.<br>20 questions, instant CEFR-aligned result (A1–B2). Choose which language to test.</p>
+          </div>
+
+          <div class="lang-pick-grid">
+            <button type="button" class="lang-pick-card" data-start-lang="en">
+              <div class="lang-pick-flag">🇬🇧</div>
+              <h3>Test my English</h3>
+              <p>Para hispanohablantes · 20 preguntas de gramática y vocabulario</p>
+              <span class="btn btn-coral btn-block">Empezar →</span>
+            </button>
+            <button type="button" class="lang-pick-card" data-start-lang="es">
+              <div class="lang-pick-flag">🇪🇸</div>
+              <h3>Test my Spanish</h3>
+              <p>For English speakers · 20 grammar &amp; vocabulary questions</p>
+              <span class="btn btn-coral btn-block">Start →</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- ===== Preguntas ===== -->
+        <div id="quizPlay" hidden>
+          <div class="quiz-progress">
+            <div class="quiz-progress-track"><div class="quiz-progress-fill" id="progressFill"></div></div>
+            <span class="quiz-progress-label" id="progressLabel">1 / 20</span>
+          </div>
+          <p class="quiz-instruction" id="quizInstruction"></p>
+          <div class="quiz-card">
+            <p class="quiz-question" id="questionPrompt"></p>
+            <div class="quiz-options" id="optionsList"></div>
+            <div class="quiz-nav-btns">
+              <button type="button" class="btn btn-ink-outline" id="prevBtn">← Atrás / Back</button>
+              <button type="button" class="btn btn-coral" id="nextBtn" disabled>Siguiente / Next →</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== Captura de datos ===== -->
+        <div id="quizGate" hidden>
+          <div class="gate-card">
+            <h2 id="gateTitle"></h2>
+            <form id="gateForm" novalidate>
+              <div class="gate-field">
+                <label id="nameLabel" for="gateName"></label>
+                <input type="text" id="gateName" name="name" autocomplete="name" required>
+              </div>
+              <div class="gate-field">
+                <label id="emailLabel" for="gateEmail"></label>
+                <input type="email" id="gateEmail" name="email" autocomplete="email" required>
+              </div>
+              <div class="gate-field">
+                <label id="waLabel" for="gateWa"></label>
+                <input type="tel" id="gateWa" name="whatsapp" autocomplete="tel" placeholder="+57 300 000 0000">
+              </div>
+              <div class="hp-field" aria-hidden="true">
+                <label for="gateWebsite">Website</label>
+                <input type="text" id="gateWebsite" name="website" tabindex="-1" autocomplete="off">
+              </div>
+              <label class="gate-consent">
+                <input type="checkbox" name="consent" required>
+                <span id="consentText"></span>
+              </label>
+              <p class="gate-error" id="gateError" hidden>Por favor completa los campos obligatorios. / Please fill in the required fields.</p>
+              <button type="submit" class="btn btn-coral btn-block btn-lg" id="gateSubmit"></button>
+            </form>
+          </div>
+        </div>
+
+        <!-- ===== Resultado ===== -->
+        <div id="quizResult" hidden>
+          <div class="result-card">
+            <p class="kicker kicker-coral" id="resultKicker" style="display:inline-block"></p>
+            <div class="result-badge" id="resultBadge"></div>
+            <h2 class="result-title" id="resultTitle"></h2>
+            <p class="result-text" id="resultText"></p>
+            <span class="result-score" id="resultScore"></span>
+            <div class="result-actions">
+              <a class="btn btn-coral btn-lg" id="resultWa" target="_blank" rel="noopener noreferrer"></a>
+              <button type="button" class="btn btn-ink-outline btn-lg" id="resultRestart"></button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Jonatan Castellanos · Teaching Materials. <span data-i18n="ft_rights">Todos los derechos reservados.</span></p>
+      <nav aria-label="Legal">
+        <a href="politicas.html" data-i18n="ft_legal">Privacidad, Términos y Cookies</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/quiz-data.js"></script>
+  <script src="js/quiz.js"></script>
+</body>
+</html>

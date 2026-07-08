@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /send-quiz.php
 
 Sitemap: https://castellanosjonatan.com/sitemap.xml
