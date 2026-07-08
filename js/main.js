@@ -258,3 +258,25 @@ faqItems.forEach((item) => {
 /* ---------- Año del footer ---------- */
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+/* ---------- Seguimiento de conversiones (Google Ads) ---------- */
+function trackEvent(name, params) {
+  if (typeof gtag === 'function') gtag('event', name, params || {});
+}
+
+document.querySelectorAll('[data-wa]').forEach((el) => {
+  el.addEventListener('click', () => {
+    trackEvent('whatsapp_click', { source: el.dataset.wa || 'general' });
+  });
+});
+
+document.querySelectorAll('a[href*="hotmart.com"]').forEach((el) => {
+  el.addEventListener('click', () => {
+    const product = el.closest('.product')?.querySelector('h3')?.textContent || 'unknown';
+    trackEvent('hotmart_click', { product });
+  });
+});
+
+document.querySelectorAll('a[href^="mailto:"]').forEach((el) => {
+  el.addEventListener('click', () => trackEvent('email_click', {}));
+});
