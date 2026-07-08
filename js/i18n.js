@@ -37,6 +37,7 @@
     nav_packs: 'Teacher Shop',
     nav_sobre: 'About me',
     nav_test: 'Level Test',
+    nav_new: 'new',
     nav_cta: 'Say hi 👋',
 
     hero_eyebrow: 'Spots open · 1:1 online classes',
@@ -45,6 +46,7 @@
     hero_desc: "I'm <strong>Jonatan Castellanos</strong> and I've spent 16 years making languages finally make sense. 1:1 online <strong>English</strong> and <strong>Spanish</strong> classes that feel like a conversation, not homework.",
     hero_cta1: 'Start on WhatsApp',
     hero_cta2: 'See pricing →',
+    hero_quiz_link: "Don't know your level? Find out free in 5 min",
     stat_1: 'years teaching',
     stat_2: 'USD, from (groups)',
     stat_3: 'students per class',
@@ -187,7 +189,7 @@
 
     ab_lawyer: '⚖️ What if what you need isn\'t a language but a lawyer in Colombia? Objection sustained — I\'ve got you covered too: <a href="https://jonatancastellanosabogado.com" target="_blank" rel="noopener noreferrer">jonatancastellanosabogado.com</a> 😉',
 
-    qp_kicker: 'Free · 5 minutes',
+    qp_kicker: 'Free · 5 minutes · 20 questions',
     qp_h2: "What's your real level?",
     qp_lead: 'Answer 20 questions and discover your CEFR level (A1–B2) instantly, with a class recommendation made for you.',
     qp_test_en: 'Test my English',

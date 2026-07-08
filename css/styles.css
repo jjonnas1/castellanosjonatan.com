@@ -1537,42 +1537,122 @@ img { max-width: 100%; display: block; }
 
 .lawyer-plug a:hover { color: var(--violet); border-color: var(--violet); }
 
+/* ---------- Enlace del test dentro del hero ---------- */
+.hero-quiz-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  font-weight: 700;
+  font-size: .92rem;
+  color: var(--ink);
+  text-decoration: none;
+  background: var(--paper);
+  border: 2px dashed var(--coral);
+  border-radius: 999px;
+  padding: .6rem 1.2rem;
+  margin-bottom: 2.2rem;
+  transition: transform .18s var(--ease), background .2s;
+}
+
+.hero-quiz-link:hover { transform: translateY(-2px); background: var(--cream-2); }
+
+.pulse-dot-sm { width: 7px; height: 7px; }
+
 /* ---------- Promo del test de nivel ---------- */
 .quiz-promo {
-  padding: 3.5rem 0;
-  background: var(--cream-2);
+  position: relative;
+  padding: 4.5rem 0;
+  text-align: center;
+  overflow: hidden;
+  background:
+    radial-gradient(650px 320px at 15% 0%, rgba(255, 197, 61, .22), transparent 60%),
+    radial-gradient(600px 320px at 90% 100%, rgba(108, 76, 241, .28), transparent 60%),
+    var(--coral);
   border-block: var(--bw) solid var(--ink);
 }
 
-.quiz-promo-inner {
+.quiz-promo-inner { position: relative; }
+
+.quiz-promo-badge-row {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
+  justify-content: center;
+  gap: .6rem;
+  margin-bottom: 1.4rem;
 }
 
-.quiz-promo-copy { max-width: 560px; }
+.quiz-level-chip {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, .5);
+  color: rgba(255, 255, 255, .75);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: .8rem;
+  transition: transform .2s var(--ease);
+}
+
+.quiz-level-chip--active {
+  background: var(--yellow);
+  border-color: var(--ink);
+  color: var(--ink);
+  box-shadow: 0 0 0 4px rgba(255, 197, 61, .25);
+  transform: scale(1.15);
+}
+
+.quiz-promo-copy { max-width: 620px; margin-inline: auto; }
 
 .quiz-promo-copy h2 {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: clamp(1.5rem, 3.4vw, 2.1rem);
-  color: var(--ink);
-  letter-spacing: -.01em;
-  margin-bottom: .5rem;
+  font-size: clamp(1.9rem, 4.4vw, 2.8rem);
+  color: #fff;
+  letter-spacing: -.02em;
+  margin-bottom: .8rem;
 }
 
-.quiz-promo-copy .lead { font-size: .98rem; margin-bottom: 0; }
+.quiz-promo-copy .lead { font-size: 1.02rem; margin-bottom: 0; color: rgba(255, 255, 255, .9); }
 
 .quiz-promo-actions {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
+  margin-top: 2rem;
 }
 
 @media (max-width: 720px) {
-  .quiz-promo-inner { flex-direction: column; align-items: stretch; text-align: center; }
-  .quiz-promo-actions { justify-content: center; }
-  .quiz-promo-actions .btn { flex: 1; min-width: 160px; }
+  .quiz-promo { padding: 3.5rem 0; }
+  .quiz-promo-actions { flex-direction: column; align-items: stretch; }
+  .quiz-promo-actions .btn { width: 100%; }
+}
+
+/* ---------- Badge "nuevo" en el nav ---------- */
+.nav-test-link {
+  display: inline-flex !important;
+  align-items: center;
+  gap: .4rem;
+}
+
+.nav-new-badge {
+  font-size: .6rem;
+  font-weight: 800;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--coral);
+  border-radius: 999px;
+  padding: .15rem .45rem;
+  animation: navBadgePulse 2s infinite;
+}
+
+@keyframes navBadgePulse {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.12); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-new-badge { animation: none; }
 }

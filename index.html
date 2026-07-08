@@ -150,7 +150,7 @@
         <a href="#clases" data-nav data-i18n="nav_clases">Clases 1:1</a>
         <a href="#precios" data-nav data-i18n="nav_precios">Precios</a>
         <a href="#packs" data-nav data-i18n="nav_packs">Tienda del Profe</a>
-        <a href="test-nivel.html" data-i18n="nav_test">Test de Nivel</a>
+        <a href="test-nivel.html" class="nav-test-link"><span data-i18n="nav_test">Test de Nivel</span><span class="nav-new-badge" data-i18n="nav_new">nuevo</span></a>
         <a href="#sobre-mi" data-nav data-i18n="nav_sobre">Sobre mí</a>
         <a href="#faq" data-nav>FAQ</a>
         <a href="#contacto" class="nav-cta" data-i18n="nav_cta">Escríbeme 👋</a>
@@ -196,6 +196,11 @@
             <a class="btn btn-ink-outline btn-lg" href="#precios" data-i18n="hero_cta2">Ver precios →</a>
           </div>
 
+          <a class="hero-quiz-link reveal d-3" href="test-nivel.html">
+            <span class="pulse-dot pulse-dot-sm"></span>
+            🎯 <span data-i18n="hero_quiz_link">¿No sabes tu nivel? Descúbrelo gratis en 5 min</span> →
+          </a>
+
           <dl class="hero-stats reveal d-4">
             <div><dt data-counter="16">0</dt><dd data-i18n="stat_1">años enseñando</dd></div>
             <div><dt data-counter="18" data-prefix="$" data-suffix="/h">0</dt><dd data-i18n="stat_2">USD, desde (grupos)</dd></div>
@@ -233,6 +238,27 @@
       </div>
     </section>
 
+    <!-- ===== TEST DE NIVEL (promo) ===== -->
+    <section class="quiz-promo">
+      <div class="container quiz-promo-inner reveal">
+        <div class="quiz-promo-badge-row">
+          <span class="quiz-level-chip">A1</span>
+          <span class="quiz-level-chip">A2</span>
+          <span class="quiz-level-chip quiz-level-chip--active">B1</span>
+          <span class="quiz-level-chip">B2</span>
+        </div>
+        <div class="quiz-promo-copy">
+          <p class="kicker kicker-cream" data-i18n="qp_kicker">Gratis · 5 minutos · 20 preguntas</p>
+          <h2 data-i18n="qp_h2">¿Cuál es tu nivel real?</h2>
+          <p class="lead" data-i18n="qp_lead">Responde 20 preguntas y descubre tu nivel MCER (A1–B2) al instante, con una recomendación de clases hecha para ti.</p>
+        </div>
+        <div class="quiz-promo-actions">
+          <a class="btn btn-yellow btn-lg" href="test-nivel.html?lang=en">🇬🇧 <span data-i18n="qp_test_en">Test my English</span></a>
+          <a class="btn btn-cream-outline btn-lg" href="test-nivel.html?lang=es">🇪🇸 <span data-i18n="qp_test_es">Test my Spanish</span></a>
+        </div>
+      </div>
+    </section>
+
     <!-- ===== MARQUEE ===== -->
     <div class="ribbon" id="ribbon" aria-hidden="true">
       <div class="ribbon-track">
@@ -248,21 +274,6 @@
         <span data-i18n="rb_5">Pagos vía PayPal</span><i>✱</i>
       </div>
     </div>
-
-    <!-- ===== TEST DE NIVEL (promo) ===== -->
-    <section class="section quiz-promo">
-      <div class="container quiz-promo-inner reveal">
-        <div class="quiz-promo-copy">
-          <p class="kicker kicker-coral" data-i18n="qp_kicker">Gratis · 5 minutos</p>
-          <h2 data-i18n="qp_h2">¿Cuál es tu nivel real?</h2>
-          <p class="lead" data-i18n="qp_lead">Responde 20 preguntas y descubre tu nivel MCER (A1–B2) al instante, con una recomendación de clases hecha para ti.</p>
-        </div>
-        <div class="quiz-promo-actions">
-          <a class="btn btn-coral btn-lg" href="test-nivel.html?lang=en">🇬🇧 <span data-i18n="qp_test_en">Test my English</span></a>
-          <a class="btn btn-ink btn-lg" href="test-nivel.html?lang=es">🇪🇸 <span data-i18n="qp_test_es">Test my Spanish</span></a>
-        </div>
-      </div>
-    </section>
 
     <!-- ===== CLASES 1:1 ===== -->
     <section class="section" id="clases">
