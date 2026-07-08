@@ -264,9 +264,14 @@ function trackEvent(name, params) {
   if (typeof gtag === 'function') gtag('event', name, params || {});
 }
 
+const WA_CONVERSION_ID = 'AW-18056733453/cC0KCL_sk58cEI3Gj6JD';
+
 document.querySelectorAll('[data-wa]').forEach((el) => {
   el.addEventListener('click', () => {
     trackEvent('whatsapp_click', { source: el.dataset.wa || 'general' });
+    if (typeof gtag === 'function') {
+      gtag('event', 'conversion', { send_to: WA_CONVERSION_ID });
+    }
   });
 });
 
