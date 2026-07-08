@@ -2,8 +2,6 @@
    Test de nivel — lógica de la app
    ========================================================== */
 
-const WA_CONVERSION_ID = 'AW-18056733453/cC0KCL_sk58cEI3Gj6JD';
-
 function trackWa(source) {
   if (typeof gtag === 'function') {
     gtag('event', 'whatsapp_click', { source });
