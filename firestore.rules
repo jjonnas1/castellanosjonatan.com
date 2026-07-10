@@ -1,0 +1,183 @@
+rules_version = '2';
+
+// =====================================================================
+// Comunidad de estudiantes · castellanosjonatan.com
+// Reglas de seguridad de Firestore (se aplican EN EL SERVIDOR de Google;
+// nadie puede saltárselas aunque manipule la página).
+//
+// Modelo:
+//  - usuarios/{uid}          perfil; activoHasta la controla SOLO el admin
+//  - posts/{id}              publicaciones del muro
+//  - posts/{id}/comentarios  comentarios
+//  - reportes/{id}           reportes de contenido (solo los lee el admin)
+//  - posts_eliminados/{id}   archivo de evidencia del admin
+//
+// Escribir exige: correo verificado + membresía vigente (activoHasta
+// + 5 días de gracia) + no suspendido. Leer solo exige haber iniciado
+// sesión. El admin se identifica por correo.
+// =====================================================================
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function verified() {
+      return signedIn() && request.auth.token.email_verified == true;
+    }
+
+    function isAdmin() {
+      return verified()
+        && request.auth.token.email == 'jonatancastellanosabogado@gmail.com';
+    }
+
+    function myProfile() {
+      return get(/databases/$(database)/documents/usuarios/$(request.auth.uid)).data;
+    }
+
+    // Vigente = activado por el admin y dentro de la fecha + 5 días de gracia
+    function isActiveMember() {
+      let p = myProfile();
+      return p.activoHasta != null
+        && request.time < p.activoHasta + duration.value(5, 'd')
+        && p.suspendido != true;
+    }
+
+    function canWrite() {
+      return verified() && (isAdmin() || isActiveMember());
+    }
+
+    // Bloqueo de datos de contacto dentro del texto:
+    //  - secuencias tipo teléfono (7+ dígitos aunque tengan espacios/guiones)
+    //  - correos electrónicos
+    //  - enlaces de WhatsApp/Telegram
+    function hasContactInfo(text) {
+      return text.matches('(?s).*[0-9][0-9 .()\\-]{5,}[0-9].*')
+        || text.matches('(?s).*[A-Za-z0-9._%+\\-]+@[A-Za-z0-9.\\-]+\\.[A-Za-z]{2,}.*')
+        || text.matches('(?s).*(wa\\.me|whatsapp\\.com|t\\.me|telegram\\.me).*');
+    }
+
+    function cleanText(text, maxLen) {
+      return text is string
+        && text.size() > 0
+        && text.size() <= maxLen
+        && !hasContactInfo(text);
+    }
+
+    // ------------------------------------------------------------ usuarios
+    match /usuarios/{uid} {
+      allow read: if isAdmin() || (signedIn() && request.auth.uid == uid);
+
+      // El propio usuario crea su perfil al registrarse, pero NUNCA puede
+      // darse vigencia ni permisos: activoHasta nace null y suspendido false.
+      allow create: if signedIn()
+        && request.auth.uid == uid
+        && request.resource.data.keys().hasOnly([
+             'nombre', 'pais', 'email', 'creadoEl', 'terminosAceptadosEl',
+             'terminosVersion', 'mayorDeEdad', 'activoHasta', 'suspendido'
+           ])
+        && request.resource.data.nombre is string
+        && request.resource.data.nombre.size() >= 2
+        && request.resource.data.nombre.size() <= 40
+        && request.resource.data.pais is string
+        && request.resource.data.pais.size() <= 60
+        && request.resource.data.email == request.auth.token.email
+        && request.resource.data.mayorDeEdad == true
+        && request.resource.data.terminosAceptadosEl == request.time
+        && request.resource.data.terminosVersion is string
+        && request.resource.data.creadoEl == request.time
+        && request.resource.data.activoHasta == null
+        && request.resource.data.suspendido == false;
+
+      // El usuario solo puede cambiarse nombre y país; el admin puede todo
+      // (activar vigencia, suspender, etc.).
+      allow update: if isAdmin()
+        || (signedIn() && request.auth.uid == uid
+            && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['nombre', 'pais'])
+            && request.resource.data.nombre is string
+            && request.resource.data.nombre.size() >= 2
+            && request.resource.data.nombre.size() <= 40
+            && request.resource.data.pais is string
+            && request.resource.data.pais.size() <= 60);
+
+      allow delete: if isAdmin();
+
+      // Lista personal de usuarios silenciados ("no quiero ver sus posts")
+      match /bloqueados/{bloqueadoUid} {
+        allow read, write: if signedIn() && request.auth.uid == uid;
+      }
+    }
+
+    // --------------------------------------------------------------- posts
+    match /posts/{postId} {
+      allow read: if signedIn();
+
+      allow create: if canWrite()
+        && request.resource.data.keys().hasOnly([
+             'uid', 'autorNombre', 'autorPais', 'titulo', 'texto', 'categoria', 'creadoEl', 'expiraEl'
+           ])
+        && request.resource.data.uid == request.auth.uid
+        && request.resource.data.autorPais is string
+        && request.resource.data.autorPais.size() <= 60
+        && cleanText(request.resource.data.titulo, 120)
+        && cleanText(request.resource.data.texto, 1200)
+        && request.resource.data.categoria in ['general', 'english', 'espanol', 'dudas', 'partners']
+        && request.resource.data.creadoEl == request.time
+        // retención de 90 días (TTL): la fecha de borrado va fijada al crear
+        // (con margen de ±1 día porque la calcula el reloj del navegador)
+        && request.resource.data.expiraEl > request.time + duration.value(89, 'd')
+        && request.resource.data.expiraEl < request.time + duration.value(91, 'd');
+
+      // Sin ediciones (evita cambiar un mensaje ya moderado); borrar puede
+      // el autor o el admin.
+      allow update: if false;
+      allow delete: if isAdmin() || (signedIn() && resource.data.uid == request.auth.uid);
+
+      match /comentarios/{comentarioId} {
+        allow read: if signedIn();
+
+        allow create: if canWrite()
+          && request.resource.data.keys().hasOnly([
+               'uid', 'autorNombre', 'autorPais', 'texto', 'creadoEl', 'expiraEl'
+             ])
+          && request.resource.data.uid == request.auth.uid
+          && request.resource.data.autorPais is string
+          && request.resource.data.autorPais.size() <= 60
+          && cleanText(request.resource.data.texto, 500)
+          && request.resource.data.creadoEl == request.time
+          && request.resource.data.expiraEl > request.time + duration.value(89, 'd')
+          && request.resource.data.expiraEl < request.time + duration.value(91, 'd');
+
+        allow update: if false;
+        allow delete: if isAdmin() || (signedIn() && resource.data.uid == request.auth.uid);
+      }
+    }
+
+    // ------------------------------------------------------------ reportes
+    match /reportes/{reporteId} {
+      // Cualquier usuario con sesión puede reportar; solo el admin los ve.
+      allow create: if verified()
+        && request.resource.data.keys().hasOnly([
+             'tipo', 'postId', 'comentarioId', 'textoReportado',
+             'reportadoUid', 'reportadoNombre', 'reporterUid', 'motivo',
+             'creadoEl', 'estado'
+           ])
+        && request.resource.data.reporterUid == request.auth.uid
+        && request.resource.data.tipo in ['post', 'comentario']
+        && request.resource.data.motivo is string
+        && request.resource.data.motivo.size() >= 3
+        && request.resource.data.motivo.size() <= 500
+        && request.resource.data.estado == 'pendiente'
+        && request.resource.data.creadoEl == request.time;
+
+      allow read, update, delete: if isAdmin();
+    }
+
+    // ------------------------------------------------- archivo de evidencia
+    match /posts_eliminados/{docId} {
+      allow read, write: if isAdmin();
+    }
+  }
+}

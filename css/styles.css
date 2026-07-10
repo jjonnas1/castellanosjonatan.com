@@ -147,16 +147,21 @@ img { max-width: 100%; display: block; }
   font-weight: 700;
 }
 
-.nav-links { display: flex; align-items: center; gap: .1rem; }
+.nav-links { display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: .1rem; }
 
 .nav-links a {
   color: var(--ink);
   text-decoration: none;
   font-size: .9rem;
   font-weight: 600;
-  padding: .55rem .85rem;
+  padding: .55rem .72rem;
   border-radius: 10px;
   transition: background .2s;
+  white-space: nowrap;
+}
+
+@media (max-width: 1240px) {
+  .nav-links a { font-size: .84rem; padding: .45rem .5rem; }
 }
 
 .nav-links a:hover { background: var(--cream-2); }
@@ -1656,3 +1661,21 @@ img { max-width: 100%; display: block; }
 @media (prefers-reduced-motion: reduce) {
   .nav-new-badge { animation: none; }
 }
+
+/* ---------- Promo Comunidad (index) ---------- */
+.cp-features {
+  display: flex; flex-wrap: wrap; gap: .6rem;
+  justify-content: center;
+  margin: 1.6rem 0 2rem;
+}
+.cp-chip {
+  border: var(--bw) solid var(--ink);
+  background: var(--paper);
+  border-radius: 999px;
+  padding: .5rem 1.1rem;
+  font-weight: 700;
+  font-size: .9rem;
+  color: var(--ink);
+  box-shadow: 3px 3px 0 var(--ink);
+}
+.cp-note { margin-top: .9rem; font-size: .85rem; color: var(--muted); font-weight: 600; }

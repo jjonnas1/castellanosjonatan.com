@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comunidad | Jonatan Castellanos · Profesor de Idiomas</title>
+  <meta name="description" content="Comunidad privada de práctica de inglés y español para estudiantes activos.">
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://castellanosjonatan.com/comunidad.html">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23ff4f30'/%3E%3Ctext x='32' y='45' font-family='Arial Black,sans-serif' font-size='28' font-weight='900' fill='%23fff6ec' text-anchor='middle'%3EJC%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=4">
+  <link rel="stylesheet" href="css/comunidad.css?v=4">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18056733453"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18056733453');
+  </script>
+</head>
+<body data-static-meta>
+
+  <header class="nav scrolled" id="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-mono">JC</span>
+        <span class="brand-text">
+          <span class="brand-name">Jonatan Castellanos</span>
+          <span class="brand-tag" data-i18n="brand_tag">Profesor de Idiomas</span>
+        </span>
+      </a>
+      <nav class="nav-links" id="navLinks" aria-label="Navegación principal">
+        <a href="index.html#clases" data-i18n="nav_clases">Clases 1:1</a>
+        <a href="index.html#precios" data-i18n="nav_precios">Precios</a>
+        <a href="index.html#packs" data-i18n="nav_packs">Tienda del Profe</a>
+        <a href="test-nivel.html" class="nav-test-link"><span data-i18n="nav_test">Test de Nivel</span><span class="nav-new-badge" data-i18n="nav_new">nuevo</span></a>
+        <a href="comunidad.html" data-i18n="nav_comunidad">Comunidad</a>
+        <a href="index.html#contacto" class="nav-cta" data-i18n="nav_cta">Escríbeme 👋</a>
+      </nav>
+      <div class="nav-side">
+        <button class="c-nav-logout" id="btnSalirNav" hidden>🚪 <span data-i18n="cm_logout">Cerrar sesión</span></button>
+        <button class="lang-toggle" id="langToggle" aria-label="Switch language">EN</button>
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="comunidad">
+    <div class="container narrow">
+
+      <!-- ======================= Cargando ======================= -->
+      <div id="cLoading" class="c-loading" aria-live="polite">
+        <div class="c-spinner" aria-hidden="true"></div>
+      </div>
+
+      <!-- ================= Portada + acceso ===================== -->
+      <section id="cAuth" class="c-view" hidden>
+        <p class="c-kicker" data-i18n="cm_kicker">Solo para estudiantes</p>
+        <h1 data-i18n="cm_h1">La <span class="hl hl-yellow">Comunidad</span></h1>
+        <p class="c-lead" data-i18n="cm_lead">Un espacio privado para practicar inglés y español con otros estudiantes: publica dudas, comparte frases, busca compañeros de práctica. Es un beneficio incluido para estudiantes con clases activas.</p>
+
+        <div class="c-card c-safety">
+          <p data-i18n="cm_safety_intro"><strong>🛡️ Comunidad protegida.</strong> Espacio moderado: sin datos personales, sin groserías y con normas claras. Tu seguridad es primero.</p>
+        </div>
+
+        <div class="c-card c-auth-card">
+          <div class="c-tabs" role="tablist">
+            <button class="c-tab is-active" id="tabLogin" data-i18n="cm_tab_login">Entrar</button>
+            <button class="c-tab" id="tabRegister" data-i18n="cm_tab_register">Crear cuenta</button>
+          </div>
+
+          <form id="formLogin" class="c-form" novalidate>
+            <label data-i18n="cm_lbl_email">Correo electrónico</label>
+            <input type="email" id="loginEmail" autocomplete="email" required>
+            <label data-i18n="cm_lbl_pass">Contraseña</label>
+            <input type="password" id="loginPass" autocomplete="current-password" required>
+            <p class="c-error" id="loginError" role="alert" hidden></p>
+            <button type="submit" class="btn btn-coral" data-i18n="cm_btn_login">Entrar</button>
+            <button type="button" class="c-linkbtn" id="btnForgot" data-i18n="cm_forgot">¿Olvidaste tu contraseña?</button>
+          </form>
+
+          <form id="formRegister" class="c-form" hidden novalidate>
+            <label data-i18n="cm_lbl_nombre">Tu nombre (como te verán en la comunidad)</label>
+            <input type="text" id="regNombre" maxlength="40" autocomplete="name" required>
+            <label data-i18n="cm_lbl_pais">¿De dónde eres? (país o ciudad)</label>
+            <input type="text" id="regPais" maxlength="40" autocomplete="country-name">
+            <label data-i18n="cm_lbl_email">Correo electrónico</label>
+            <input type="email" id="regEmail" autocomplete="email" required>
+            <label data-i18n="cm_lbl_pass_new">Contraseña (mínimo 8 caracteres)</label>
+            <input type="password" id="regPass" minlength="8" autocomplete="new-password" required>
+            <label class="c-check">
+              <input type="checkbox" id="regAdulto">
+              <span data-i18n="cm_check_adulto">Declaro que soy mayor de 18 años.</span>
+            </label>
+            <label class="c-check">
+              <input type="checkbox" id="regTerminos">
+              <span data-i18n="cm_check_terminos">He leído y acepto las <button type="button" class="c-linkbtn c-inline" id="btnVerTerminos">Normas y Términos de la Comunidad</button>.</span>
+            </label>
+            <p class="c-error" id="regError" role="alert" hidden></p>
+            <button type="submit" class="btn btn-ink" data-i18n="cm_btn_register">Crear mi cuenta</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- ============== Correo sin verificar ===================== -->
+      <section id="cVerify" class="c-view" hidden>
+        <h1 data-i18n="cm_verify_h1">Confirma tu <span class="hl hl-sky">correo</span></h1>
+        <div class="c-card">
+          <p data-i18n="cm_verify_p">Te enviamos un enlace de confirmación a tu correo (revisa también spam). Confírmalo y vuelve aquí.</p>
+          <div class="c-actions">
+            <button class="btn btn-yellow" id="btnYaVerifique" data-i18n="cm_verify_done">Ya lo confirmé</button>
+            <button class="c-linkbtn" id="btnReenviar" data-i18n="cm_verify_resend">Reenviar correo</button>
+            <button class="c-linkbtn" id="btnSalir1" data-i18n="cm_logout">Cerrar sesión</button>
+          </div>
+          <p class="c-error" id="verifyMsg" hidden></p>
+        </div>
+      </section>
+
+      <!-- ============ Cuenta pendiente de activación ============= -->
+      <section id="cPending" class="c-view" hidden>
+        <h1 data-i18n="cm_pending_h1">¡Ya casi! Falta <span class="hl">activar</span> tu cuenta</h1>
+        <div class="c-card">
+          <p data-i18n="cm_pending_p1">La comunidad es un beneficio para estudiantes con clases activas. Jonatan revisa y activa cada cuenta personalmente.</p>
+          <p data-i18n="cm_pending_p2">Si ya eres estudiante (o quieres empezar clases), escríbeme por WhatsApp y activo tu acceso:</p>
+          <div class="c-actions">
+            <a id="waActivar" class="btn btn-coral" target="_blank" rel="noopener" data-i18n="cm_pending_wa">Solicitar activación 👋</a>
+            <button class="c-linkbtn" id="btnSalir2" data-i18n="cm_logout">Cerrar sesión</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= Cuenta suspendida ===================== -->
+      <section id="cSuspended" class="c-view" hidden>
+        <h1 data-i18n="cm_susp_h1">Cuenta suspendida</h1>
+        <div class="c-card">
+          <p data-i18n="cm_susp_p">Tu cuenta fue suspendida por incumplir las normas de la comunidad. Si crees que es un error, escríbeme.</p>
+          <div class="c-actions">
+            <a id="waSuspendido" class="btn btn-ink" target="_blank" rel="noopener">WhatsApp</a>
+            <button class="c-linkbtn" id="btnSalir3" data-i18n="cm_logout">Cerrar sesión</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== Comunidad ========================= -->
+      <section id="cCommunity" class="c-view" hidden>
+        <div class="c-topbar">
+          <div>
+            <h1 class="c-title" data-i18n="cm_h1b">La <span class="hl hl-yellow">Comunidad</span></h1>
+            <p class="c-status" id="cStatus"></p>
+            <div id="paisNudge" hidden>
+              <input type="text" id="paisInput" maxlength="40">
+              <button class="c-mini-btn act" id="btnGuardarPais">📍</button>
+            </div>
+          </div>
+          <div class="c-topbar-side">
+            <button class="c-mini-btn act" id="btnAdminToggle" hidden>⚙️ Panel de administración</button>
+          </div>
+        </div>
+
+        <div class="c-card c-safety c-safety-slim">
+          <p data-i18n="cm_rules_banner">🛡️ <strong>Recuerda:</strong> no compartas tu teléfono, dirección, correo ni redes personales. Practica idiomas, reporta lo que te incomode. Chat moderado.</p>
+        </div>
+
+        <!-- Compositor: crear un tema nuevo -->
+        <div class="c-card c-composer" id="cComposer">
+          <p class="c-composer-title" data-i18n="cm_new_topic">✏️ Crea un tema nuevo</p>
+          <div class="c-lang-chips" id="catChips" role="group" aria-label="Tema de la publicación">
+            <button class="c-chip is-active" data-cat="general">🌎 General</button>
+            <button class="c-chip" data-cat="english">🇬🇧 English</button>
+            <button class="c-chip" data-cat="espanol">🇪🇸 Español</button>
+            <button class="c-chip" data-cat="dudas">❓ <span data-i18n="cm_cat_dudas2">Pregunta</span></button>
+            <button class="c-chip" data-cat="partners">🤝 <span data-i18n="cm_cat_partners2">Busco compañero</span></button>
+          </div>
+          <input type="text" id="postTitulo" maxlength="120">
+          <textarea id="postTexto" rows="3" maxlength="1200"></textarea>
+          <p class="c-error" id="composerError" role="alert" hidden></p>
+          <div class="c-composer-foot">
+            <span class="c-counter" id="postCounter">0 / 1200</span>
+            <button class="btn btn-coral" id="btnPublicar" data-i18n="cm_btn_post">Publicar tema</button>
+          </div>
+        </div>
+
+        <!-- Pestañas de temas -->
+        <div class="c-tabs c-cat-tabs" id="catTabs">
+          <button class="c-tab is-active" data-cat="todo">🗂 <span data-i18n="cm_cat_todo">Todo</span></button>
+          <button class="c-tab" data-cat="general">🌎 General</button>
+          <button class="c-tab" data-cat="english">🇬🇧 English</button>
+          <button class="c-tab" data-cat="espanol">🇪🇸 Español</button>
+          <button class="c-tab" data-cat="dudas">❓ <span data-i18n="cm_cat_dudas">Preguntas</span></button>
+          <button class="c-tab" data-cat="partners">🤝 <span data-i18n="cm_cat_partners">Compañeros</span></button>
+        </div>
+
+        <!-- Aviso para membresía vencida (solo lectura) -->
+        <div class="c-card c-expired" id="cExpired" hidden>
+          <p data-i18n="cm_expired_p">📖 Tu membresía venció, así que por ahora puedes <strong>leer pero no publicar</strong>. Renueva tus clases para volver a participar:</p>
+          <a id="waRenovar" class="btn btn-yellow" target="_blank" rel="noopener" data-i18n="cm_expired_wa">Renovar por WhatsApp</a>
+        </div>
+
+        <!-- Muro (temas en vivo + páginas anteriores) -->
+        <div id="cFeed" class="c-feed" aria-live="polite">
+          <div id="cFeedLive" class="c-feed"></div>
+          <div id="cFeedMore" class="c-feed"></div>
+        </div>
+        <div class="c-actions center">
+          <button class="c-linkbtn" id="btnMas" hidden data-i18n="cm_load_more">Ver publicaciones anteriores</button>
+        </div>
+
+        <!-- Panel de administración (solo visible para Jonatan) -->
+        <div id="cAdmin" class="c-admin" hidden>
+          <h2>⚙️ Panel de administración</h2>
+          <div class="c-tabs" role="tablist">
+            <button class="c-tab is-active" id="tabAdminUsuarios">Usuarios</button>
+            <button class="c-tab" id="tabAdminReportes">Reportes <span id="badgeReportes" class="c-badge" hidden></span></button>
+          </div>
+          <div id="adminUsuarios"></div>
+          <div id="adminReportes" hidden></div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ============ Modal: Normas y Términos =================== -->
+  <div class="c-modal" id="modalTerminos" hidden>
+    <div class="c-modal-box" role="dialog" aria-modal="true" aria-labelledby="terminosTitle">
+      <button class="c-modal-close" id="btnCerrarTerminos" aria-label="Cerrar">✕</button>
+      <div class="c-modal-body" data-i18n="cm_terms_body">
+        <h2 id="terminosTitle">Normas y Términos de la Comunidad</h2>
+        <p class="c-terms-version">Versión 2026-07-v1 · castellanosjonatan.com</p>
+
+        <h3>1. Qué es este espacio</h3>
+        <p>La Comunidad es un beneficio para estudiantes con clases activas de Jonatan Castellanos. Su único propósito es practicar inglés y español entre estudiantes. No es una red social abierta ni un servicio de citas o mensajería privada.</p>
+
+        <h3>2. Requisitos</h3>
+        <ul>
+          <li>Ser <strong>mayor de 18 años</strong>. Al registrarte declaras bajo tu responsabilidad que lo eres.</li>
+          <li>Registrarte con tu nombre real y un correo verificable.</li>
+          <li>La cuenta es personal e intransferible.</li>
+        </ul>
+
+        <h3>3. Reglas de protección (lo más importante)</h3>
+        <ul>
+          <li><strong>No compartas datos personales</strong> — ni los tuyos ni los de nadie: teléfono, dirección, correo, redes sociales, ubicación, datos bancarios. El sistema bloquea automáticamente mensajes con teléfonos o correos.</li>
+          <li><strong>No acoses ni insultes.</strong> Cero tolerancia con el acoso, las insinuaciones sexuales, la discriminación y el lenguaje ofensivo, en cualquier idioma.</li>
+          <li><strong>No cites encuentros presenciales</strong> a través de la comunidad ni invites a otros miembros a conversaciones por fuera de ella.</li>
+          <li><strong>Nada de spam</strong>, publicidad, ventas, cadenas ni enlaces sospechosos.</li>
+          <li>Si algo te incomoda, <strong>usa el botón Reportar</strong>. Todos los reportes los reviso personalmente.</li>
+        </ul>
+
+        <h3>4. Moderación y sanciones</h3>
+        <p>El administrador puede eliminar cualquier contenido y suspender o cancelar cualquier cuenta que incumpla estas normas, sin previo aviso. El contenido eliminado por moderación puede conservarse como evidencia mientras exista una investigación o reclamo relacionado.</p>
+
+        <h3>5. Membresía y acceso</h3>
+        <p>El acceso para publicar está ligado a tener clases activas y se renueva con cada pago mensual, con 5 días de gracia tras el vencimiento. La cuenta vencida puede seguir leyendo. Este beneficio no tiene costo adicional y puede modificarse o descontinuarse en cualquier momento.</p>
+
+        <h3>6. Tus datos y tus mensajes</h3>
+        <ul>
+          <li>Guardamos: tu nombre, correo, fecha de aceptación de estas normas y tus publicaciones.</li>
+          <li>Las publicaciones y comentarios se <strong>eliminan automáticamente a los 90 días</strong>.</li>
+          <li>Puedes borrar tus propias publicaciones en cualquier momento y solicitar la eliminación de tu cuenta escribiendo a jonatancastellanosabogado@gmail.com.</li>
+          <li>Los datos se almacenan en Google Firebase. Consulta la <a href="politicas.html" target="_blank">política de privacidad del sitio</a>.</li>
+        </ul>
+
+        <h3>7. Responsabilidad</h3>
+        <p>La comunidad es un espacio moderado pero entre adultos: cada miembro es responsable de lo que publica y de proteger su propia información. Si decides contactar a otra persona por fuera de la comunidad —lo cual estas normas desaconsejan— lo haces bajo tu exclusiva responsabilidad. Reporta de inmediato cualquier conducta que te parezca peligrosa o ilegal.</p>
+
+        <h3>8. Aceptación</h3>
+        <p>Al marcar la casilla de aceptación quedas vinculado por estas normas. La fecha y versión de tu aceptación se registran. Las normas pueden actualizarse; los cambios rigen desde su publicación en esta página.</p>
+      </div>
+      <div class="c-modal-foot">
+        <button class="btn btn-ink" id="btnCerrarTerminos2" data-i18n="cm_terms_close">Entendido</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Jonatan Castellanos · Teaching Materials. <span data-i18n="ft_rights">Todos los derechos reservados.</span></p>
+      <nav aria-label="Legal">
+        <a href="politicas.html" data-i18n="ft_legal">Privacidad, Términos y Cookies</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=3"></script>
+  <script src="js/i18n.js?v=4"></script>
+  <script src="js/firebase-config.js?v=1"></script>
+  <script type="module" src="js/comunidad.js?v=4"></script>
+</body>
+</html>

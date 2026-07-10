@@ -221,7 +221,106 @@
     ct_lead: "Message me today and we'll book your free level check. I reply within 24 hours (business days).",
     ct_cta1: 'WhatsApp me',
     ft_rights: 'All rights reserved.',
-    ft_legal: 'Privacy, Terms & Cookies'
+    ft_legal: 'Privacy, Terms & Cookies',
+
+    /* ---- Promo Comunidad (index) ---- */
+    cp_kicker: 'New · Student benefit',
+    cp_h2: 'Practice every day in <span class="hl hl-yellow">the Community</span>',
+    cp_lead: 'Languages are learned by using them. That is why your classes include access to our private community: a moderated space where students from different countries chat in English and Spanish, ask questions and find practice partners.',
+    cp_f1: 'Topics in two languages',
+    cp_f2: 'Live conversations',
+    cp_f3: 'Students from many countries',
+    cp_f4: 'Moderated, safe space',
+    cp_cta: 'Join the Community →',
+    cp_note: 'Included at no extra cost with your active classes. 18+ only.',
+
+    /* ---- Comunidad ---- */
+    nav_comunidad: 'Community',
+    cm_nav_inicio: 'Home',
+    cm_nav_contacto: 'Contact',
+    cm_kicker: 'Students only',
+    cm_h1: 'The <span class="hl hl-yellow">Community</span>',
+    cm_h1b: 'The <span class="hl hl-yellow">Community</span>',
+    cm_lead: 'A private space to practice English and Spanish with other students: post questions, share phrases, find practice partners. It comes included for students with active classes.',
+    cm_safety_intro: '<strong>🛡️ Protected community.</strong> A moderated space: no personal data, no offensive language, clear rules. Your safety comes first.',
+    cm_tab_login: 'Sign in',
+    cm_tab_register: 'Create account',
+    cm_lbl_email: 'Email',
+    cm_lbl_pass: 'Password',
+    cm_lbl_pass_new: 'Password (minimum 8 characters)',
+    cm_lbl_nombre: 'Your name (as others will see you)',
+    cm_lbl_pais: 'Where are you from? (country or city)',
+    cm_check_adulto: 'I declare that I am over 18 years old.',
+    cm_check_terminos: 'I have read and accept the <button type="button" class="c-linkbtn c-inline" id="btnVerTerminos">Community Rules & Terms</button>.',
+    cm_btn_login: 'Sign in',
+    cm_btn_register: 'Create my account',
+    cm_forgot: 'Forgot your password?',
+    cm_logout: 'Sign out',
+    cm_verify_h1: 'Confirm your <span class="hl hl-sky">email</span>',
+    cm_verify_p: 'We sent a confirmation link to your email (check spam too). Confirm it and come back here.',
+    cm_verify_done: 'I confirmed it',
+    cm_verify_resend: 'Re-send email',
+    cm_pending_h1: 'Almost there! Your account needs <span class="hl">activation</span>',
+    cm_pending_p1: 'The Community is a benefit for students with active classes. Jonatan reviews and activates every account personally.',
+    cm_pending_p2: 'If you are already a student (or want to start classes), message me on WhatsApp and I will activate your access:',
+    cm_pending_wa: 'Request activation 👋',
+    cm_susp_h1: 'Account suspended',
+    cm_susp_p: 'Your account was suspended for breaking the community rules. If you think this is a mistake, write to me.',
+    cm_rules_banner: '🛡️ <strong>Remember:</strong> never share your phone number, address, email or personal social media. Practice languages, report anything that makes you uncomfortable. Moderated space.',
+    cm_chip_mix: 'Both',
+    cm_new_topic: '✏️ Start a new topic',
+    cm_cat_todo: 'All',
+    cm_cat_dudas: 'Questions',
+    cm_cat_partners: 'Partners',
+    cm_cat_dudas2: 'Question',
+    cm_cat_partners2: 'Find a partner',
+    cm_btn_post: 'Post topic',
+    cm_expired_p: '📖 Your membership expired, so for now you can <strong>read but not post</strong>. Renew your classes to participate again:',
+    cm_expired_wa: 'Renew via WhatsApp',
+    cm_load_more: 'See older posts',
+    cm_terms_close: 'Got it',
+    cm_terms_body: `
+        <h2 id="terminosTitle">Community Rules &amp; Terms</h2>
+        <p class="c-terms-version">Version 2026-07-v1 · castellanosjonatan.com</p>
+
+        <h3>1. What this space is</h3>
+        <p>The Community is a benefit for students with active classes with Jonatan Castellanos. Its only purpose is practicing English and Spanish among students. It is not an open social network, a dating service or a private messaging app.</p>
+
+        <h3>2. Requirements</h3>
+        <ul>
+          <li>Being <strong>over 18 years old</strong>. By signing up you declare, under your own responsibility, that you are.</li>
+          <li>Signing up with your real name and a verifiable email.</li>
+          <li>Accounts are personal and non-transferable.</li>
+        </ul>
+
+        <h3>3. Safety rules (the most important part)</h3>
+        <ul>
+          <li><strong>Never share personal data</strong> — yours or anyone else's: phone numbers, addresses, emails, social media, location, banking details. The system automatically blocks messages containing phone numbers or emails.</li>
+          <li><strong>No harassment or insults.</strong> Zero tolerance for harassment, sexual advances, discrimination and offensive language, in any language.</li>
+          <li><strong>Do not arrange in-person meetings</strong> through the community or invite other members to conversations outside of it.</li>
+          <li><strong>No spam</strong>, advertising, sales, chain messages or suspicious links.</li>
+          <li>If something makes you uncomfortable, <strong>use the Report button</strong>. I review every report personally.</li>
+        </ul>
+
+        <h3>4. Moderation and sanctions</h3>
+        <p>The administrator may remove any content and suspend or cancel any account that breaks these rules, without prior notice. Content removed by moderation may be kept as evidence while a related investigation or claim exists.</p>
+
+        <h3>5. Membership and access</h3>
+        <p>Posting access is tied to having active classes and renews with each monthly payment, with a 5-day grace period after expiry. Expired accounts can still read. This benefit has no additional cost and may be modified or discontinued at any time.</p>
+
+        <h3>6. Your data and your messages</h3>
+        <ul>
+          <li>We store: your name, email, the date you accepted these rules, and your posts.</li>
+          <li>Posts and comments are <strong>automatically deleted after 90 days</strong>.</li>
+          <li>You can delete your own posts at any time and request account deletion by writing to jonatancastellanosabogado@gmail.com.</li>
+          <li>Data is stored on Google Firebase. See the site's <a href="politicas.html" target="_blank">privacy policy</a>.</li>
+        </ul>
+
+        <h3>7. Responsibility</h3>
+        <p>The community is a moderated space, but a space among adults: every member is responsible for what they post and for protecting their own information. If you decide to contact another person outside the community — which these rules advise against — you do so at your own risk. Report immediately any behavior that seems dangerous or illegal.</p>
+
+        <h3>8. Acceptance</h3>
+        <p>By ticking the acceptance box you are bound by these rules. The date and version of your acceptance are recorded. Rules may be updated; changes apply from their publication on this page.</p>`
   };
 
   const META = {
